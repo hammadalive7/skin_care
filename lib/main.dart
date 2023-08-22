@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
 import 'package:xam_shoes_app/core/constants/string_constants.dart';
 import 'package:xam_shoes_app/core/constants/theme_constants.dart';
 import 'package:xam_shoes_app/core/controllers/auth/auth_controller.dart';
