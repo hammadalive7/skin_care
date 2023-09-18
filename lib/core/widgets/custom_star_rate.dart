@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:xam_shoes_app/core/constants/color_constants.dart';
-import 'package:xam_shoes_app/core/utils/base/base_stateless.dart';
+import 'package:skin_care/core/constants/color_constants.dart';
+import 'package:skin_care/core/utils/base/base_stateless.dart';
 
 class CustomStarRate extends BaseStatelessWidget {
   final double value;

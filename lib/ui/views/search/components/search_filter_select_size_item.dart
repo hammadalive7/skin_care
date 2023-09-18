@@ -1,14 +1,10 @@
-/*
-Author: XamDesign
-Date: 27.05.2023
-*/
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:xam_shoes_app/core/constants/color_constants.dart';
-import 'package:xam_shoes_app/core/data/filter_size_list.dart';
-import 'package:xam_shoes_app/core/utils/base/base_controller.dart';
-import 'package:xam_shoes_app/core/utils/device_utils.dart';
+import 'package:skin_care/core/constants/color_constants.dart';
+import 'package:skin_care/core/data/filter_size_list.dart';
+import 'package:skin_care/core/utils/base/base_controller.dart';
+import 'package:skin_care/core/utils/device_utils.dart';
 
 class SearchFilterSelectSizeItem extends StatelessWidget {
   final int index;
@@ -26,12 +22,12 @@ class SearchFilterSelectSizeItem extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 16.0),
             child: GestureDetector(
               onTap: () =>
-                  BaseController.searchShoeController.changeFilterSize(index),
+                  BaseController.searchProductController.changeFilterSize(index),
               child: Container(
                 width: DeviceUtils.getDynamicWidth(context, 0.18),
                 decoration: BoxDecoration(
                   color:
-                  BaseController.searchShoeController.filterSizeIndex.value ==
+                  BaseController.searchProductController.filterSizeIndex.value ==
                       index
                       ? kLightBlueColor
                       : BaseController.themeController.isDark.value
@@ -44,7 +40,7 @@ class SearchFilterSelectSizeItem extends StatelessWidget {
                     filterSizeList[index],
                     style: context.textTheme.titleSmall?.copyWith(
                       color: BaseController
-                          .searchShoeController.filterSizeIndex.value ==
+                          .searchProductController.filterSizeIndex.value ==
                           index
                           ? kWhiteColor
                           : null,

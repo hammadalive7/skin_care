@@ -1,12 +1,8 @@
-/*
-Author: XamDesign
-Date: 7.06.2023
-*/
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:xam_shoes_app/core/constants/color_constants.dart';
-import 'package:xam_shoes_app/core/utils/base/base_controller.dart';
+import 'package:skin_care/core/constants/color_constants.dart';
+import 'package:skin_care/core/utils/base/base_controller.dart';
 
 class ChatMessageAvatar extends StatelessWidget {
   final String image;

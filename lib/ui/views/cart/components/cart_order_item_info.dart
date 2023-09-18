@@ -1,12 +1,8 @@
-/*
-Author: XamDesign
-Date: 1.06.2023
-*/
 
 import 'package:flutter/material.dart';
-import 'package:xam_shoes_app/core/data/shoe_list.dart';
-import 'package:xam_shoes_app/ui/views/cart/components/cart_order_item_piece.dart';
-import 'package:xam_shoes_app/ui/views/shoe/shoe_price.dart';
+import 'package:skin_care/core/data/product_list.dart';
+import 'package:skin_care/ui/views/cart/components/cart_order_item_piece.dart';
+import 'package:skin_care/ui/views/product/product_price.dart';
 
 class CartOrderItemInfo extends StatelessWidget {
   final int index;
@@ -27,7 +23,7 @@ class CartOrderItemInfo extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          ShoePrice(shoeIndex: shoeList.indexWhere((e) => e.model == model)),
+          ProductPrice(productIndex: productList.indexWhere((e) => e.model == model)),
           const SizedBox(height: 16.0),
           CartOrderItemPiece(index: index),
         ],

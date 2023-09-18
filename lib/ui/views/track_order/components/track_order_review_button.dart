@@ -1,18 +1,14 @@
-/*
-Author: XamDesign
-Date: 12.06.2023
-*/
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'package:xam_shoes_app/core/models/shoe_model.dart';
-import 'package:xam_shoes_app/core/utils/base/base_stateless.dart';
-import 'package:xam_shoes_app/core/widgets/custom_submit_button.dart';
-import 'package:xam_shoes_app/ui/views/review/review_screen.dart';
+import 'package:skin_care/core/models/product_model.dart';
+import 'package:skin_care/core/utils/base/base_stateless.dart';
+import 'package:skin_care/core/widgets/custom_submit_button.dart';
+import 'package:skin_care/ui/views/review/review_screen.dart';
 
 class TrackOrderReviewButton extends BaseStatelessWidget {
-  final Shoe product;
+  final Product product;
 
   const TrackOrderReviewButton({
     required this.product,

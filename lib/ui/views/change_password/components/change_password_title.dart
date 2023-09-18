@@ -1,15 +1,11 @@
-/*
-Author: XamDesign
-Date: 1.06.2023
-*/
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'package:xam_shoes_app/core/translations/translation_keys.dart';
-import 'package:xam_shoes_app/core/utils/base/base_stateless.dart';
-import 'package:xam_shoes_app/core/utils/device_utils.dart';
-import 'package:xam_shoes_app/core/widgets/custom_title.dart';
+import 'package:skin_care/core/translations/translation_keys.dart';
+import 'package:skin_care/core/utils/base/base_stateless.dart';
+import 'package:skin_care/core/utils/device_utils.dart';
+import 'package:skin_care/core/widgets/custom_title.dart';
 
 class ChangePasswordTitle extends BaseStatelessWidget {
   const ChangePasswordTitle({

@@ -1,14 +1,10 @@
-/*
-Author: XamDesign
-Date: 5.06.2023
-*/
 
 import 'package:flutter/material.dart';
 
-import 'package:xam_shoes_app/core/utils/base/base_stateless.dart';
-import 'package:xam_shoes_app/core/utils/device_utils.dart';
-import 'package:xam_shoes_app/ui/views/forgot_password/components/forgot_password_form.dart';
-import 'package:xam_shoes_app/ui/views/forgot_password/components/forgot_password_welcome.dart';
+import 'package:skin_care/core/utils/base/base_stateless.dart';
+import 'package:skin_care/core/utils/device_utils.dart';
+import 'package:skin_care/ui/views/forgot_password/components/forgot_password_form.dart';
+import 'package:skin_care/ui/views/forgot_password/components/forgot_password_welcome.dart';
 
 class ForgotPasswordBody extends BaseStatelessWidget {
   const ForgotPasswordBody({

@@ -1,7 +1,4 @@
-/*
-Author: XamDesign
-Date: 15.06.2023
-*/
+
 
 import 'dart:ui';
 

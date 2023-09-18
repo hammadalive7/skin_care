@@ -1,22 +1,18 @@
-/*
-Author: XamDesign
-Date: 30.05.2023
-*/
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:xam_shoes_app/core/constants/color_constants.dart';
-import 'package:xam_shoes_app/core/models/shoe_model.dart';
-import 'package:xam_shoes_app/core/translations/translation_keys.dart';
-import 'package:xam_shoes_app/core/utils/base/base_controller.dart';
-import 'package:xam_shoes_app/core/utils/device_utils.dart';
-import 'package:xam_shoes_app/ui/views/detail/components/detail_property_text.dart';
+import 'package:skin_care/core/constants/color_constants.dart';
+import 'package:skin_care/core/models/product_model.dart';
+import 'package:skin_care/core/translations/translation_keys.dart';
+import 'package:skin_care/core/utils/base/base_controller.dart';
+import 'package:skin_care/core/utils/device_utils.dart';
+import 'package:skin_care/ui/views/detail/components/detail_property_text.dart';
 
 class DetailProperties extends StatefulWidget {
-  final Shoe shoe;
+  final Product product;
 
   const DetailProperties({
-    required this.shoe,
+    required this.product,
     super.key,
   });
 
@@ -51,15 +47,15 @@ class _DetailPropertiesState extends State<DetailProperties> {
             const SizedBox(height: 16.0),
             DetailPropertyText(
               title: "${TranslationKeys.outerMaterial.tr}:",
-              description: widget.shoe.outerMaterial,
+              description: widget.product.outerMaterial,
             ),
             DetailPropertyText(
               title: "${TranslationKeys.lining.tr}:",
-              description: widget.shoe.lining,
+              description: widget.product.lining,
             ),
             DetailPropertyText(
               title: "${TranslationKeys.sole.tr}:",
-              description: widget.shoe.sole,
+              description: widget.product.sole,
             ),
             Offstage(
               offstage: !BaseController.detailController.showDetails.value,
@@ -68,15 +64,15 @@ class _DetailPropertiesState extends State<DetailProperties> {
                 children: [
                   DetailPropertyText(
                     title: "${TranslationKeys.brand.tr}:",
-                    description: widget.shoe.brand,
+                    description: widget.product.brand,
                   ),
                   DetailPropertyText(
                     title: "${TranslationKeys.gender.tr}:",
-                    description: widget.shoe.gender,
+                    description: widget.product.gender,
                   ),
                   DetailPropertyText(
                     title: "${TranslationKeys.year.tr}:",
-                    description: widget.shoe.releaseYear,
+                    description: widget.product.releaseYear,
                   ),
                 ],
               ),

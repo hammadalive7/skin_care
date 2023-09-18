@@ -1,13 +1,8 @@
-/*
-Author: XamDesign
-Date: 12.06.2023
-*/
 
 import 'package:flutter/material.dart';
-
-import 'package:xam_shoes_app/core/models/order_model.dart';
-import 'package:xam_shoes_app/core/utils/base/base_stateless.dart';
-import 'package:xam_shoes_app/ui/views/track_order/components/track_order_supplier_info_text.dart';
+import 'package:skin_care/core/models/order_model.dart';
+import 'package:skin_care/core/utils/base/base_stateless.dart';
+import 'package:skin_care/ui/views/track_order/components/track_order_supplier_info_text.dart';
 
 class TrackOrderSupplierInfo extends BaseStatelessWidget {
   final Order order;

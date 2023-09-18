@@ -1,15 +1,11 @@
-/*
-Author: XamDesign
-Date: 7.06.2023
-*/
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:xam_shoes_app/core/constants/color_constants.dart';
-import 'package:xam_shoes_app/core/translations/translation_keys.dart';
-import 'package:xam_shoes_app/core/utils/base/base_controller.dart';
-import 'package:xam_shoes_app/core/utils/device_utils.dart';
-import 'package:xam_shoes_app/core/widgets/custom_text_field/custom_text_field_with_icon.dart';
+import 'package:skin_care/core/constants/color_constants.dart';
+import 'package:skin_care/core/translations/translation_keys.dart';
+import 'package:skin_care/core/utils/base/base_controller.dart';
+import 'package:skin_care/core/utils/device_utils.dart';
+import 'package:skin_care/core/widgets/custom_text_field/custom_text_field_with_icon.dart';
 
 class MessageSearchTextField extends StatelessWidget {
   const MessageSearchTextField({

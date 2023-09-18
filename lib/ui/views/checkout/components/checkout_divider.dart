@@ -1,12 +1,8 @@
-/*
-Author: XamDesign
-Date: 3.06.2023
-*/
 
 import 'package:flutter/material.dart';
 
-import 'package:xam_shoes_app/core/utils/device_utils.dart';
-import 'package:xam_shoes_app/core/widgets/custom_dashed_horizontal_line.dart';
+import 'package:skin_care/core/utils/device_utils.dart';
+import 'package:skin_care/core/widgets/custom_dashed_horizontal_line.dart';
 
 class CheckoutDivider extends StatelessWidget {
   const CheckoutDivider({

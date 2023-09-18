@@ -1,13 +1,9 @@
-/*
-Author: XamDesign
-Date: 30.05.2023
-*/
 
 import 'package:flutter/material.dart';
 
-import 'package:xam_shoes_app/core/utils/device_utils.dart';
-import 'package:xam_shoes_app/ui/views/detail/components/detail_color_list.dart';
-import 'package:xam_shoes_app/ui/views/detail/components/detail_title.dart';
+import 'package:skin_care/core/utils/device_utils.dart';
+import 'package:skin_care/ui/views/detail/components/detail_color_list.dart';
+import 'package:skin_care/ui/views/detail/components/detail_title.dart';
 
 class DetailInfo extends StatelessWidget {
   final String model;

@@ -1,14 +1,10 @@
-/*
-Author: XamDesign
-Date: 5.06.2023
-*/
 
 import 'package:flutter/material.dart';
 
-import 'package:xam_shoes_app/core/utils/device_utils.dart';
-import 'package:xam_shoes_app/core/widgets/sign_in_with_google_button.dart';
-import 'package:xam_shoes_app/ui/views/sign_in/components/sign_in_form.dart';
-import 'package:xam_shoes_app/ui/views/sign_in/components/sign_in_welcome.dart';
+import 'package:skin_care/core/utils/device_utils.dart';
+import 'package:skin_care/core/widgets/sign_in_with_google_button.dart';
+import 'package:skin_care/ui/views/sign_in/components/sign_in_form.dart';
+import 'package:skin_care/ui/views/sign_in/components/sign_in_welcome.dart';
 
 class SignInBody extends StatelessWidget {
   const SignInBody({

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:xam_shoes_app/ui/views/home/components/home_shoe_list.dart';
+import 'package:skin_care/ui/views/home/components/home_product_list.dart';
 
 class MyHomePage extends StatelessWidget {
   @override
@@ -15,7 +15,7 @@ class MyHomePage extends StatelessWidget {
           SliverList(
             delegate: SliverChildBuilderDelegate(
               (BuildContext context, int index) {
-                return const HomeShoeList();
+                return const HomeProductList();
               },
             ),
           ),

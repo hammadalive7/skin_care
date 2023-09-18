@@ -1,13 +1,9 @@
-/*
-Author: XamDesign
-Date: 12.06.2023
-*/
 
 import 'package:flutter/material.dart';
 
-import 'package:xam_shoes_app/core/constants/color_constants.dart';
-import 'package:xam_shoes_app/core/utils/base/base_stateless.dart';
-import 'package:xam_shoes_app/core/utils/device_utils.dart';
+import 'package:skin_care/core/constants/color_constants.dart';
+import 'package:skin_care/core/utils/base/base_stateless.dart';
+import 'package:skin_care/core/utils/device_utils.dart';
 
 class TrackOrderInfoImage extends BaseStatelessWidget {
   final String image;

@@ -1,12 +1,8 @@
-/*
-Author: XamDesign
-Date: 7.06.2023
-*/
 
 import 'package:flutter/material.dart';
 
-import 'package:xam_shoes_app/core/utils/device_utils.dart';
-import 'package:xam_shoes_app/ui/views/order_summary/components/order_summary_order_list.dart';
+import 'package:skin_care/core/utils/device_utils.dart';
+import 'package:skin_care/ui/views/order_summary/components/order_summary_order_list.dart';
 
 class OrderSummaryBody extends StatelessWidget {
   const OrderSummaryBody({

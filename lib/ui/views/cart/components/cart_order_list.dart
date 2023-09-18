@@ -1,14 +1,12 @@
-/*
-Author: XamDesign
-Date: 24.05.2023
-*/
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:xam_shoes_app/core/translations/translation_keys.dart';
-import 'package:xam_shoes_app/core/utils/base/base_controller.dart';
-import 'package:xam_shoes_app/core/utils/device_utils.dart';
-import 'package:xam_shoes_app/ui/views/cart/components/cart_order_item.dart';
+
+import '../../../../core/translations/translation_keys.dart';
+import '../../../../core/utils/base/base_controller.dart';
+import '../../../../core/utils/device_utils.dart';
+import 'cart_order_item.dart';
+
 
 class CartOrderList extends StatelessWidget {
   const CartOrderList({

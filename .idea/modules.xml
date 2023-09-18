@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/XamShoesApp.iml" filepath="$PROJECT_DIR$/.idea/XamShoesApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/SkinCareApp.iml" filepath="$PROJECT_DIR$/.idea/SkinCareApp.iml" />
     </modules>
   </component>
 </project>

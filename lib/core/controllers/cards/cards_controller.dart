@@ -1,10 +1,7 @@
-/*
-Author: XamDesign
-Date: 8.06.2023
-*/
+
 
 import 'package:get/get.dart';
-import 'package:xam_shoes_app/core/utils/card_number_formatter.dart';
+import 'package:skin_care/core/utils/card_number_formatter.dart';
 
 class CardsController extends GetxController {
   RxString cardNumber = "1234 5678 9012 3456".obs;

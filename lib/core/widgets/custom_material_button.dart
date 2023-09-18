@@ -1,11 +1,8 @@
-/*
-Author: XamDesign
-Date: 26.05.2023
-*/
+
 
 import 'package:flutter/material.dart';
 
-import 'package:xam_shoes_app/core/utils/base/base_stateless.dart';
+import 'package:skin_care/core/utils/base/base_stateless.dart';
 
 class CustomMaterialButton extends BaseStatelessWidget {
   final Color backgroundColor;

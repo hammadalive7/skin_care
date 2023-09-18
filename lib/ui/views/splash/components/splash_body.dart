@@ -1,12 +1,8 @@
-/*
-Author: XamDesign
-Date: 5.06.2023
-*/
 
 import 'package:flutter/material.dart';
 
-import 'package:xam_shoes_app/ui/views/splash/components/splash_logo.dart';
-import 'package:xam_shoes_app/ui/views/splash/components/splash_title.dart';
+import 'package:skin_care/ui/views/splash/components/splash_logo.dart';
+import 'package:skin_care/ui/views/splash/components/splash_title.dart';
 
 class SplashBody extends StatelessWidget {
   const SplashBody({super.key});

@@ -1,12 +1,8 @@
-/*
-Author: XamDesign
-Date: 5.06.2023
-*/
 
 import 'package:flutter/material.dart';
-import 'package:xam_shoes_app/ui/views/scan/components/scan_app_bar.dart';
-import 'package:xam_shoes_app/ui/views/scan/components/scan_body.dart';
-import 'package:xam_shoes_app/ui/views/scan/components/scan_shoe_info.dart';
+import 'package:skin_care/ui/views/scan/components/scan_app_bar.dart';
+import 'package:skin_care/ui/views/scan/components/scan_body.dart';
+import 'package:skin_care/ui/views/scan/components/scan_shoe_info.dart';
 
 class ScanScreen extends StatelessWidget {
   const ScanScreen({super.key});
@@ -17,7 +13,7 @@ class ScanScreen extends StatelessWidget {
       appBar: ScanAppBar(),
       body: ScanBody(),
       extendBodyBehindAppBar: true,
-      floatingActionButton: ScanShoeInfo(),
+      floatingActionButton: ScanProductInfo(),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );
   }

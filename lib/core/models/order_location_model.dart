@@ -1,7 +1,4 @@
-/*
-Author: XamDesign
-Date: 7.06.2023
-*/
+
 
 import 'package:latlong2/latlong.dart';
 

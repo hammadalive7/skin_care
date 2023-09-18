@@ -1,15 +1,11 @@
-/*
-Author: XamDesign
-Date: 3.06.2023
-*/
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:xam_shoes_app/core/translations/translation_keys.dart';
-import 'package:xam_shoes_app/core/utils/device_utils.dart';
-import 'package:xam_shoes_app/core/widgets/custom_submit_button.dart';
-import 'package:xam_shoes_app/ui/views/order_successful/order_successful_screen.dart';
+import 'package:skin_care/core/translations/translation_keys.dart';
+import 'package:skin_care/core/utils/device_utils.dart';
+import 'package:skin_care/core/widgets/custom_submit_button.dart';
+import 'package:skin_care/ui/views/order_successful/order_successful_screen.dart';
 
 class CheckoutPayNowButton extends StatelessWidget {
   const CheckoutPayNowButton({

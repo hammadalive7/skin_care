@@ -1,17 +1,13 @@
-/*
-Author: XamDesign
-Date: 22.05.2023
-*/
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:xam_shoes_app/core/utils/base/base_controller.dart';
-import 'package:xam_shoes_app/ui/views/login/components/login_email_field.dart';
-import 'package:xam_shoes_app/ui/views/login/components/login_login_button.dart';
-import 'package:xam_shoes_app/ui/views/login/components/login_password_field.dart';
-import 'package:xam_shoes_app/ui/views/login/components/login_remember_me_checkbox.dart';
-import 'package:xam_shoes_app/ui/views/navigation/navigation_screen.dart';
+import 'package:skin_care/core/utils/base/base_controller.dart';
+import 'package:skin_care/ui/views/login/components/login_email_field.dart';
+import 'package:skin_care/ui/views/login/components/login_login_button.dart';
+import 'package:skin_care/ui/views/login/components/login_password_field.dart';
+import 'package:skin_care/ui/views/login/components/login_remember_me_checkbox.dart';
+import 'package:skin_care/ui/views/navigation/navigation_screen.dart';
 
 class LoginForm extends StatefulWidget {
   const LoginForm({

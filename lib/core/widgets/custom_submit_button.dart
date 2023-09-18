@@ -1,12 +1,9 @@
-/*
-Author: XamDesign
-Date: 22.05.2023
-*/
+
 
 import 'package:flutter/cupertino.dart';
 import 'package:get/get_utils/get_utils.dart';
-import 'package:xam_shoes_app/core/constants/color_constants.dart';
-import 'package:xam_shoes_app/core/utils/device_utils.dart';
+import 'package:skin_care/core/constants/color_constants.dart';
+import 'package:skin_care/core/utils/device_utils.dart';
 
 class CustomSubmitButton extends StatelessWidget {
   final String title;

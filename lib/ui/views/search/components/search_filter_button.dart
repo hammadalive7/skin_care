@@ -1,14 +1,10 @@
-/*
-Author: XamDesign
-Date: 26.05.2023
-*/
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-import 'package:xam_shoes_app/core/constants/color_constants.dart';
-import 'package:xam_shoes_app/core/widgets/custom_material_button.dart';
-import 'package:xam_shoes_app/ui/views/search/components/search_filter_bottom_sheet.dart';
+import 'package:skin_care/core/constants/color_constants.dart';
+import 'package:skin_care/core/widgets/custom_material_button.dart';
+import 'package:skin_care/ui/views/search/components/search_filter_bottom_sheet.dart';
 
 class SearchFilterButton extends StatelessWidget {
   const SearchFilterButton({

@@ -1,13 +1,9 @@
-/*
-Author: XamDesign
-Date: 5.06.2023
-*/
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:mobile_scanner/mobile_scanner.dart';
 
-import 'package:xam_shoes_app/core/utils/device_utils.dart';
+import 'package:skin_care/core/utils/device_utils.dart';
 
 class ScanQRView extends StatefulWidget {
   const ScanQRView({super.key});

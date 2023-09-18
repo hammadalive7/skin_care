@@ -1,14 +1,10 @@
-/*
-Author: XamDesign
-Date: 3.06.2023
-*/
 
 import 'package:flutter/material.dart';
 
-import 'package:xam_shoes_app/core/utils/base/base_stateless.dart';
-import 'package:xam_shoes_app/core/utils/device_utils.dart';
-import 'package:xam_shoes_app/ui/views/order_successful/components/order_successful_text.dart';
-import 'package:xam_shoes_app/ui/views/order_successful/components/order_successful_title.dart';
+import 'package:skin_care/core/utils/base/base_stateless.dart';
+import 'package:skin_care/core/utils/device_utils.dart';
+import 'package:skin_care/ui/views/order_successful/components/order_successful_text.dart';
+import 'package:skin_care/ui/views/order_successful/components/order_successful_title.dart';
 
 class OrderSuccessfulInfo extends BaseStatelessWidget {
   const OrderSuccessfulInfo({

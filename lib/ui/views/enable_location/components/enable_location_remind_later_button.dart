@@ -1,14 +1,10 @@
-/*
-Author: XamDesign
-Date: 6.06.2023
-*/
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'package:xam_shoes_app/core/constants/color_constants.dart';
-import 'package:xam_shoes_app/core/translations/translation_keys.dart';
-import 'package:xam_shoes_app/core/utils/base/base_stateless.dart';
+import 'package:skin_care/core/constants/color_constants.dart';
+import 'package:skin_care/core/translations/translation_keys.dart';
+import 'package:skin_care/core/utils/base/base_stateless.dart';
 
 class EnableLocationRemindLaterButton extends BaseStatelessWidget {
   const EnableLocationRemindLaterButton({

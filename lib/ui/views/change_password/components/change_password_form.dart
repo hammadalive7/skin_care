@@ -1,14 +1,10 @@
-/*
-Author: XamDesign
-Date: 22.05.2023
-*/
 
 import 'package:flutter/material.dart';
-import 'package:xam_shoes_app/core/utils/base/base_controller.dart';
-import 'package:xam_shoes_app/core/utils/device_utils.dart';
-import 'package:xam_shoes_app/ui/views/change_password/components/change_password_confirm_new_password_field.dart';
-import 'package:xam_shoes_app/ui/views/change_password/components/change_password_new_password_field.dart';
-import 'package:xam_shoes_app/ui/views/change_password/components/change_password_recent_password_field.dart';
+import 'package:skin_care/core/utils/base/base_controller.dart';
+import 'package:skin_care/core/utils/device_utils.dart';
+import 'package:skin_care/ui/views/change_password/components/change_password_confirm_new_password_field.dart';
+import 'package:skin_care/ui/views/change_password/components/change_password_new_password_field.dart';
+import 'package:skin_care/ui/views/change_password/components/change_password_recent_password_field.dart';
 
 class ChangePasswordForm extends StatefulWidget {
   const ChangePasswordForm({

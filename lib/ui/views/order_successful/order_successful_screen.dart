@@ -1,16 +1,12 @@
-/*
-Author: XamDesign
-Date: 3.06.2023
-*/
 
 import 'dart:async';
 import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:xam_shoes_app/core/utils/base/base_statefull.dart';
-import 'package:xam_shoes_app/ui/views/order_successful/components/order_successful_body.dart';
-import 'package:xam_shoes_app/ui/views/order_successful/components/order_successful_go_home_button.dart';
+import 'package:skin_care/core/utils/base/base_statefull.dart';
+import 'package:skin_care/ui/views/order_successful/components/order_successful_body.dart';
+import 'package:skin_care/ui/views/order_successful/components/order_successful_go_home_button.dart';
 
 class OrderSuccessfulScreen extends StatefulWidget {
   const OrderSuccessfulScreen({Key? key}) : super(key: key);

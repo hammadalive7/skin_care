@@ -1,12 +1,8 @@
-/*
-Author: XamDesign
-Date: 22.05.2023
-*/
 
 import 'package:flutter/material.dart';
-import 'package:xam_shoes_app/core/utils/base/base_statefull.dart';
-import 'package:xam_shoes_app/ui/views/search/components/search_app_bar.dart';
-import 'package:xam_shoes_app/ui/views/search/components/search_body.dart';
+import 'package:skin_care/core/utils/base/base_statefull.dart';
+import 'package:skin_care/ui/views/search/components/search_app_bar.dart';
+import 'package:skin_care/ui/views/search/components/search_body.dart';
 
 class SearchScreen extends StatefulWidget {
   const SearchScreen({Key? key}) : super(key: key);

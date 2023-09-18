@@ -1,9 +1,6 @@
-/*
-Author: XamDesign
-Date: 7.06.2023
-*/
 
-import 'package:xam_shoes_app/core/models/order_location_model.dart';
+
+import 'package:skin_care/core/models/order_location_model.dart';
 
 class OrderSupplier {
   int id;

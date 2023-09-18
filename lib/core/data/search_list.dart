@@ -1,7 +1,4 @@
-/*
-Author: XamDesign
-Date: 1.06.2023
-*/
+
 
 const List<String> searchList = [
   "under armour shoes",

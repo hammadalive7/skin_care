@@ -1,12 +1,8 @@
-/*
-Author: XamDesign
-Date: 30.05.2023
-*/
 
 import 'package:flutter/material.dart';
-import 'package:xam_shoes_app/ui/views/search/components/search_last_search_list.dart';
-import 'package:xam_shoes_app/ui/views/search/components/search_last_seen_list.dart';
-import 'package:xam_shoes_app/ui/views/search/components/search_text_field.dart';
+import 'package:skin_care/ui/views/search/components/search_last_search_list.dart';
+import 'package:skin_care/ui/views/search/components/search_last_seen_list.dart';
+import 'package:skin_care/ui/views/search/components/search_text_field.dart';
 
 class SearchBody extends StatelessWidget {
   const SearchBody({

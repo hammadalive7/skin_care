@@ -1,7 +1,3 @@
-/*
-Author: XamDesign
-Date: 25.05.2023
-*/
 
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
@@ -14,14 +10,14 @@ class HomeController extends GetxController {
   Rx<RangeValues> currentRangeValues = const RangeValues(0, 500).obs;
   RxBool isShowCategoryList = true.obs;
 
-  ScrollController shoeListController = ScrollController();
+  ScrollController productListController = ScrollController();
 
-  void scrollListenerShoesList() async {
-    if (shoeListController.position.userScrollDirection ==
+  void scrollListenerProductsList() async {
+    if (productListController.position.userScrollDirection ==
         ScrollDirection.reverse) {
       isShowCategoryList.value = false;
     }
-    if (shoeListController.position.userScrollDirection ==
+    if (productListController.position.userScrollDirection ==
         ScrollDirection.forward) {
       isShowCategoryList.value = true;
     }

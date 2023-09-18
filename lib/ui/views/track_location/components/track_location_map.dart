@@ -1,12 +1,8 @@
-/*
-Author: XamDesign
-Date: 6.06.2023
-*/
 
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:latlong2/latlong.dart';
-import 'package:xam_shoes_app/ui/views/track_location/components/track_location_marker.dart';
+import 'package:skin_care/ui/views/track_location/components/track_location_marker.dart';
 
 class TrackLocationMap extends StatelessWidget {
   const TrackLocationMap({

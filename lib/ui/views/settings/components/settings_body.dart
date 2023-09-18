@@ -1,20 +1,16 @@
-/*
-Author: XamDesign
-Date: 30.05.2023
-*/
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'package:xam_shoes_app/core/translations/translation_keys.dart';
-import 'package:xam_shoes_app/core/utils/device_utils.dart';
-import 'package:xam_shoes_app/ui/views/account/account_screen.dart';
-import 'package:xam_shoes_app/ui/views/change_address/change_address_screen.dart';
-import 'package:xam_shoes_app/ui/views/change_password/change_password_screen.dart';
-import 'package:xam_shoes_app/ui/views/settings/components/settings_delete_account_button.dart';
-import 'package:xam_shoes_app/ui/views/settings/components/settings_language_bottom_sheet.dart';
-import 'package:xam_shoes_app/ui/views/settings/components/settings_notification_bottom_sheet.dart';
-import 'package:xam_shoes_app/ui/views/settings/components/settings_option_button.dart';
+import 'package:skin_care/core/translations/translation_keys.dart';
+import 'package:skin_care/core/utils/device_utils.dart';
+import 'package:skin_care/ui/views/account/account_screen.dart';
+import 'package:skin_care/ui/views/change_address/change_address_screen.dart';
+import 'package:skin_care/ui/views/change_password/change_password_screen.dart';
+import 'package:skin_care/ui/views/settings/components/settings_delete_account_button.dart';
+import 'package:skin_care/ui/views/settings/components/settings_language_bottom_sheet.dart';
+import 'package:skin_care/ui/views/settings/components/settings_notification_bottom_sheet.dart';
+import 'package:skin_care/ui/views/settings/components/settings_option_button.dart';
 
 class SettingsBody extends StatelessWidget {
   const SettingsBody({

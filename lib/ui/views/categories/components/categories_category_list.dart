@@ -1,13 +1,10 @@
-/*
-Author: XamDesign
-Date: 25.05.2023
-*/
+
 
 import 'package:flutter/material.dart';
 
-import 'package:xam_shoes_app/core/data/category_list.dart';
-import 'package:xam_shoes_app/core/utils/device_utils.dart';
-import 'package:xam_shoes_app/ui/views/categories/components/categories_category_item.dart';
+import 'package:skin_care/core/data/category_list.dart';
+import 'package:skin_care/core/utils/device_utils.dart';
+import 'package:skin_care/ui/views/categories/components/categories_category_item.dart';
 
 class CategoriesCategoryList extends StatelessWidget {
   const CategoriesCategoryList({

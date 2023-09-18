@@ -1,15 +1,11 @@
-/*
-Author: XamDesign
-Date: 13.06.2023
-*/
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'package:xam_shoes_app/core/translations/translation_keys.dart';
-import 'package:xam_shoes_app/core/widgets/custom_bottom_sheet/custom_bottom_sheet.dart';
-import 'package:xam_shoes_app/ui/views/settings/components/settings_bottom_sheet_apply_button.dart';
-import 'package:xam_shoes_app/ui/views/settings/components/settings_language_bottom_sheet_language_row.dart';
+import 'package:skin_care/core/translations/translation_keys.dart';
+import 'package:skin_care/core/widgets/custom_bottom_sheet/custom_bottom_sheet.dart';
+import 'package:skin_care/ui/views/settings/components/settings_bottom_sheet_apply_button.dart';
+import 'package:skin_care/ui/views/settings/components/settings_language_bottom_sheet_language_row.dart';
 
 class SettingsLanguageBottomSheet extends StatefulWidget {
   const SettingsLanguageBottomSheet({

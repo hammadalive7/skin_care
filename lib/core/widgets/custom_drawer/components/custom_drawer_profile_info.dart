@@ -1,14 +1,11 @@
-/*
-Author: XamDesign
-Date: 29.05.2023
-*/
+
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:xam_shoes_app/core/constants/color_constants.dart';
-import 'package:xam_shoes_app/core/translations/translation_keys.dart';
-import 'package:xam_shoes_app/core/utils/base/base_stateless.dart';
-import 'package:xam_shoes_app/ui/views/account/account_screen.dart';
+import 'package:skin_care/core/constants/color_constants.dart';
+import 'package:skin_care/core/translations/translation_keys.dart';
+import 'package:skin_care/core/utils/base/base_stateless.dart';
+import 'package:skin_care/ui/views/account/account_screen.dart';
 
 class CustomDrawerProfileInfo extends BaseStatelessWidget {
   const CustomDrawerProfileInfo({
@@ -29,7 +26,7 @@ class CustomDrawerProfileInfo extends BaseStatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  "XamDesign",
+                  "NOTHING",
                   style: Theme.of(context).textTheme.labelMedium?.copyWith(
                         fontWeight: FontWeight.bold,
                       ),

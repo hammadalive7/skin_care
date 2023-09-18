@@ -1,13 +1,9 @@
-/*
-Author: XamDesign
-Date: 1.06.2023
-*/
 
 import 'package:flutter/material.dart';
-import 'package:xam_shoes_app/ui/views/checkout/components/checkout_divider.dart';
-import 'package:xam_shoes_app/ui/views/checkout/components/checkout_shipping_cost.dart';
-import 'package:xam_shoes_app/ui/views/checkout/components/checkout_subtotal.dart';
-import 'package:xam_shoes_app/ui/views/checkout/components/checkout_total.dart';
+import 'package:skin_care/ui/views/checkout/components/checkout_divider.dart';
+import 'package:skin_care/ui/views/checkout/components/checkout_shipping_cost.dart';
+import 'package:skin_care/ui/views/checkout/components/checkout_subtotal.dart';
+import 'package:skin_care/ui/views/checkout/components/checkout_total.dart';
 
 class CheckoutTotalInfo extends StatelessWidget {
   const CheckoutTotalInfo({

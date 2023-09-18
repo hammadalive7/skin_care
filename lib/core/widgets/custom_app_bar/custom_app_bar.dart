@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get_utils/get_utils.dart';
-import 'package:xam_shoes_app/core/utils/base/base_stateless.dart';
+import 'package:skin_care/core/utils/base/base_stateless.dart';
 
 class CustomAppBar extends BaseStatelessWidget implements PreferredSizeWidget {
   final String title;

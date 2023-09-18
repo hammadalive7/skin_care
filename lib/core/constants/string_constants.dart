@@ -1,8 +1,4 @@
-/*
-Author: XamDesign
-Date: 20.05.2023
-*/
 
-const String appName = "Xam Shoes App";
+const String appName = "Skin Care";
 
 String get fontFamily => "SFUIDisplay";

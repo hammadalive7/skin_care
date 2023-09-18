@@ -1,11 +1,8 @@
-/*
-Author: XamDesign
-Date: 5.06.2023
-*/
+
 
 import 'package:flutter/material.dart';
 import 'package:get/get_utils/get_utils.dart';
-import 'package:xam_shoes_app/core/widgets/custom_warning_alert/custom_warning_alert_body.dart';
+import 'package:skin_care/core/widgets/custom_warning_alert/custom_warning_alert_body.dart';
 
 class CustomWarningAlert extends StatelessWidget {
   final String title;

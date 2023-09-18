@@ -1,14 +1,10 @@
-/*
-Author: XamDesign
-Date: 20.05.2023
-*/
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'package:xam_shoes_app/core/constants/color_constants.dart';
-import 'package:xam_shoes_app/ui/views/onboarding/onboarding_screen.dart';
-import 'package:xam_shoes_app/ui/views/splash/components/splash_body.dart';
+import 'package:skin_care/core/constants/color_constants.dart';
+import 'package:skin_care/ui/views/onboarding/onboarding_screen.dart';
+import 'package:skin_care/ui/views/splash/components/splash_body.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -18,6 +14,7 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
+
   @override
   void initState() {
     _navigateToHome();

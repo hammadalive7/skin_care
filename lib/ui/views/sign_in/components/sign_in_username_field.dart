@@ -1,14 +1,10 @@
-/*
-Author: XamDesign
-Date: 22.05.2023
-*/
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'package:xam_shoes_app/core/translations/translation_keys.dart';
-import 'package:xam_shoes_app/core/utils/device_utils.dart';
-import 'package:xam_shoes_app/core/widgets/custom_text_field/custom_text_field_with_title.dart';
+import 'package:skin_care/core/translations/translation_keys.dart';
+import 'package:skin_care/core/utils/device_utils.dart';
+import 'package:skin_care/core/widgets/custom_text_field/custom_text_field_with_title.dart';
 
 class SignInUsernameField extends StatelessWidget {
   const SignInUsernameField({

@@ -1,7 +1,4 @@
-/*
-Author: XamDesign
-Date: 3.06.2023
-*/
+
 
 class ColorfulIcon {
   final String icon;

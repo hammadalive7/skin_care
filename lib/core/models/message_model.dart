@@ -1,7 +1,4 @@
-/*
-Author: XamDesign
-Date: 10.06.2023
-*/
+
 
 class Message {
   final String text;

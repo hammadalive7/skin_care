@@ -1,14 +1,10 @@
-/*
-Author: XamDesign
-Date: 25.05.2023
-*/
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:xam_shoes_app/core/data/shoe_list.dart';
-import 'package:xam_shoes_app/core/translations/translation_keys.dart';
-import 'package:xam_shoes_app/core/utils/device_utils.dart';
-import 'package:xam_shoes_app/ui/views/search/components/search_last_seen_item.dart';
+import 'package:skin_care/core/data/product_list.dart';
+import 'package:skin_care/core/translations/translation_keys.dart';
+import 'package:skin_care/core/utils/device_utils.dart';
+import 'package:skin_care/ui/views/search/components/search_last_seen_item.dart';
 
 class SearchLastSeenList extends StatelessWidget {
   const SearchLastSeenList({
@@ -37,7 +33,7 @@ class SearchLastSeenList extends StatelessWidget {
             child: ListView.builder(
               shrinkWrap: true,
               scrollDirection: Axis.horizontal,
-              itemCount: shoeList.length,
+              itemCount: productList.length,
               itemBuilder: (context, index) {
                 if (index == 0) {
                   return Row(
@@ -46,13 +42,13 @@ class SearchLastSeenList extends StatelessWidget {
                         width: DeviceUtils.getDynamicWidth(context, 0.05),
                       ),
                       SearchLastSeenItem(
-                        shoe: shoeList[index],
+                        product: productList[index],
                       ),
                     ],
                   );
                 } else {
                   return SearchLastSeenItem(
-                    shoe: shoeList[index],
+                    product: productList[index],
                   );
                 }
               },

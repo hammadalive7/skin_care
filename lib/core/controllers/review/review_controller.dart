@@ -1,7 +1,4 @@
-/*
-Author: XamDesign
-Date: 8.06.2023
-*/
+
 
 import 'package:get/get.dart';
 

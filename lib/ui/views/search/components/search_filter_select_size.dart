@@ -1,15 +1,11 @@
-/*
-Author: XamDesign
-Date: 27.05.2023
-*/
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'package:xam_shoes_app/core/translations/translation_keys.dart';
-import 'package:xam_shoes_app/core/utils/device_utils.dart';
-import 'package:xam_shoes_app/core/widgets/custom_bottom_sheet/custom_bottom_sheet_subtitle.dart';
-import 'package:xam_shoes_app/ui/views/search/components/search_filter_select_size_list.dart';
+import 'package:skin_care/core/translations/translation_keys.dart';
+import 'package:skin_care/core/utils/device_utils.dart';
+import 'package:skin_care/core/widgets/custom_bottom_sheet/custom_bottom_sheet_subtitle.dart';
+import 'package:skin_care/ui/views/search/components/search_filter_select_size_list.dart';
 
 class SearchFilterSelectSize extends StatelessWidget {
   const SearchFilterSelectSize({

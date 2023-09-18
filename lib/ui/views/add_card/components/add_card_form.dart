@@ -1,19 +1,16 @@
-/*
-Author: XamDesign
-Date: 9.06.2023
-*/
+
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'package:xam_shoes_app/core/translations/translation_keys.dart';
-import 'package:xam_shoes_app/core/utils/device_utils.dart';
-import 'package:xam_shoes_app/ui/views/add_card/components/add_card_card_cvv_field.dart';
-import 'package:xam_shoes_app/ui/views/add_card/components/add_card_card_expiry_date_field.dart';
-import 'package:xam_shoes_app/ui/views/add_card/components/add_card_card_holder_field.dart';
-import 'package:xam_shoes_app/ui/views/add_card/components/add_card_card_number_field.dart';
-import 'package:xam_shoes_app/ui/views/add_card/components/add_card_card_type_field.dart';
-import 'package:xam_shoes_app/ui/views/add_card/components/add_card_done_button.dart';
+import 'package:skin_care/core/translations/translation_keys.dart';
+import 'package:skin_care/core/utils/device_utils.dart';
+import 'package:skin_care/ui/views/add_card/components/add_card_card_cvv_field.dart';
+import 'package:skin_care/ui/views/add_card/components/add_card_card_expiry_date_field.dart';
+import 'package:skin_care/ui/views/add_card/components/add_card_card_holder_field.dart';
+import 'package:skin_care/ui/views/add_card/components/add_card_card_number_field.dart';
+import 'package:skin_care/ui/views/add_card/components/add_card_card_type_field.dart';
+import 'package:skin_care/ui/views/add_card/components/add_card_done_button.dart';
 
 class AddCardForm extends StatefulWidget {
   const AddCardForm({

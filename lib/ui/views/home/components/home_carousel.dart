@@ -1,6 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:xam_shoes_app/core/utils/device_utils.dart';
+import 'package:skin_care/core/utils/device_utils.dart';
 
 class HomeCarousel extends StatelessWidget {
   const HomeCarousel({super.key});
@@ -24,11 +24,10 @@ class HomeCarousel extends StatelessWidget {
           autoPlayCurve: Curves.fastOutSlowIn,
         ),
         items: [
-          "assets/images/adidas_campaign.jpeg",
-          "assets/images/nike_campaign.jpg",
-          "assets/images/puma_campaign.jpeg"
-        ]
-            .map((e) => ClipRRect(
+          "assets/images/banner1.png",
+          "assets/images/banner2.png",
+          "assets/images/banner3.png",
+        ].map((e) => ClipRRect(
                   borderRadius: BorderRadius.circular(24.0),
                   child: Image.asset(
                     e,

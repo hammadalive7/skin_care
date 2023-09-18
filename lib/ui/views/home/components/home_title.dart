@@ -1,13 +1,9 @@
-/*
-Author: XamDesign
-Date: 24.05.2023
-*/
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:xam_shoes_app/core/translations/translation_keys.dart';
-import 'package:xam_shoes_app/core/utils/device_utils.dart';
-import 'package:xam_shoes_app/core/widgets/custom_title.dart';
+import 'package:skin_care/core/translations/translation_keys.dart';
+import 'package:skin_care/core/utils/device_utils.dart';
+import 'package:skin_care/core/widgets/custom_title.dart';
 
 class HomeTitle extends StatelessWidget {
   const HomeTitle({
@@ -23,7 +19,7 @@ class HomeTitle extends StatelessWidget {
       ),
       child: CustomTitle(
         titleTop: TranslationKeys.homeTitleLine1.trParams({
-          "product": "Nike",
+          "product": "Skin",
         }),
         titleBottom: TranslationKeys.products.tr,
       ),

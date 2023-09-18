@@ -1,15 +1,11 @@
-/*
-Author: XamDesign
-Date: 25.05.2023
-*/
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'package:xam_shoes_app/core/constants/color_constants.dart';
-import 'package:xam_shoes_app/core/utils/base/base_controller.dart';
-import 'package:xam_shoes_app/core/utils/device_utils.dart';
+import 'package:skin_care/core/constants/color_constants.dart';
+import 'package:skin_care/core/utils/base/base_controller.dart';
+import 'package:skin_care/core/utils/device_utils.dart';
 
 class HomeCategoryItem extends StatelessWidget {
   final int category;
@@ -54,28 +50,29 @@ class HomeCategoryItem extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 if (icon.isNotEmpty)
-                  SvgPicture.asset(
-                    icon,
-                    width: 32.0,
-                    colorFilter: ColorFilter.mode(
-                      BaseController.homeController.categoryIndex.value ==
-                              category
-                          ? kWhiteColor
-                          : BaseController.themeController.isDark.value
-                              ? kWhiteColor
-                              : Colors.black,
-                      BlendMode.srcIn,
-                    ),
-                  ),
-                if (BaseController.homeController.categoryIndex.value ==
-                        category ||
-                    icon.isEmpty)
+                  // SvgPicture.asset(
+                  //   icon,
+                  //   width: 32.0,
+                  //   colorFilter: ColorFilter.mode(
+                  //     BaseController.homeController.categoryIndex.value ==
+                  //             category
+                  //         ? kWhiteColor
+                  //         : BaseController.themeController.isDark.value
+                  //             ? kWhiteColor
+                  //             : Colors.black,
+                  //     BlendMode.srcIn,
+                  //   ),
+                  // ),
+                // if (BaseController.homeController.categoryIndex.value ==
+                //         category ||
+                //     icon.isEmpty)
                   Flexible(
                     child: Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 4.0),
                       child: Text(
                         title,
                         style: context.textTheme.bodyMedium?.copyWith(
+                          overflow: TextOverflow.ellipsis,
                           color: BaseController
                                       .homeController.categoryIndex.value ==
                                   category

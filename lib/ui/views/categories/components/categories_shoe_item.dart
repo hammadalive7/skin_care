@@ -1,23 +1,20 @@
-/*
-Author: XamDesign
-Date: 25.05.2023
-*/
+
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:xam_shoes_app/core/constants/color_constants.dart';
-import 'package:xam_shoes_app/core/data/shoe_list.dart';
-import 'package:xam_shoes_app/core/translations/translation_keys.dart';
-import 'package:xam_shoes_app/core/utils/base/base_controller.dart';
-import 'package:xam_shoes_app/core/utils/device_utils.dart';
-import 'package:xam_shoes_app/core/widgets/custom_material_button.dart';
-import 'package:xam_shoes_app/ui/views/detail/detail_screen.dart';
-import 'package:xam_shoes_app/ui/views/shoe/shoe_price.dart';
+import 'package:skin_care/core/constants/color_constants.dart';
+import 'package:skin_care/core/data/product_list.dart';
+import 'package:skin_care/core/translations/translation_keys.dart';
+import 'package:skin_care/core/utils/base/base_controller.dart';
+import 'package:skin_care/core/utils/device_utils.dart';
+import 'package:skin_care/core/widgets/custom_material_button.dart';
+import 'package:skin_care/ui/views/detail/detail_screen.dart';
+import 'package:skin_care/ui/views/product/product_price.dart';
 
-class CategoriesShoeItem extends StatelessWidget {
+class CategoriesProductItem extends StatelessWidget {
   final int index;
 
-  const CategoriesShoeItem({
+  const CategoriesProductItem({
     required this.index,
     super.key,
   });
@@ -25,7 +22,7 @@ class CategoriesShoeItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => Get.to(() => DetailScreen(shoe: shoeList[index])),
+      onTap: () => Get.to(() => DetailScreen(product: productList[index])),
       child: Container(
         width: DeviceUtils.getWidth(context),
         height: DeviceUtils.getDynamicHeight(context, 0.2),
@@ -46,13 +43,13 @@ class CategoriesShoeItem extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  ShoePrice(shoeIndex: index),
+                  ProductPrice(productIndex: index),
                   const SizedBox(height: 4.0),
                   CustomMaterialButton(
                     backgroundColor: kLightBlueColor,
                     borderRadius: BorderRadius.circular(48.0),
                     onTap: () =>
-                        Get.to(() => DetailScreen(shoe: shoeList[index])),
+                        Get.to(() => DetailScreen(product: productList[index])),
                     child: Padding(
                       padding: const EdgeInsets.symmetric(
                         horizontal: 24.0,
@@ -74,7 +71,7 @@ class CategoriesShoeItem extends StatelessWidget {
             Expanded(
               flex: 2,
               child: Image.asset(
-                shoeList[index].images.first,
+                productList[index].images.first,
                 height: DeviceUtils.getDynamicHeight(context, 0.2),
               ),
             ),

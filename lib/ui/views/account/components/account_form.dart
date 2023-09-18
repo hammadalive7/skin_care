@@ -1,16 +1,13 @@
-/*
-Author: XamDesign
-Date: 5.06.2023
-*/
+
 
 import 'package:flutter/material.dart';
 
-import 'package:xam_shoes_app/core/utils/base/base_controller.dart';
-import 'package:xam_shoes_app/core/utils/base/base_statefull.dart';
-import 'package:xam_shoes_app/core/utils/device_utils.dart';
-import 'package:xam_shoes_app/ui/views/account/components/account_email_field.dart';
-import 'package:xam_shoes_app/ui/views/account/components/account_name_field.dart';
-import 'package:xam_shoes_app/ui/views/account/components/account_phone_number_field.dart';
+import 'package:skin_care/core/utils/base/base_controller.dart';
+import 'package:skin_care/core/utils/base/base_statefull.dart';
+import 'package:skin_care/core/utils/device_utils.dart';
+import 'package:skin_care/ui/views/account/components/account_email_field.dart';
+import 'package:skin_care/ui/views/account/components/account_name_field.dart';
+import 'package:skin_care/ui/views/account/components/account_phone_number_field.dart';
 
 class AccountForm extends StatefulWidget {
   const AccountForm({

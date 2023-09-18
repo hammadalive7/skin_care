@@ -1,16 +1,12 @@
-/*
-Author: XamDesign
-Date: 7.06.2023
-*/
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'package:xam_shoes_app/core/constants/color_constants.dart';
-import 'package:xam_shoes_app/core/models/order_supplier_model.dart';
-import 'package:xam_shoes_app/core/utils/base/base_controller.dart';
-import 'package:xam_shoes_app/core/utils/device_utils.dart';
-import 'package:xam_shoes_app/ui/views/chat/chat_screen.dart';
+import 'package:skin_care/core/constants/color_constants.dart';
+import 'package:skin_care/core/models/order_supplier_model.dart';
+import 'package:skin_care/core/utils/base/base_controller.dart';
+import 'package:skin_care/core/utils/device_utils.dart';
+import 'package:skin_care/ui/views/chat/chat_screen.dart';
 
 class MessageChatItem extends StatelessWidget {
   final OrderSupplier sender;

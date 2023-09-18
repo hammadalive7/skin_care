@@ -1,14 +1,10 @@
-/*
-Author: XamDesign
-Date: 23.05.2023
-*/
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:xam_shoes_app/core/constants/color_constants.dart';
-import 'package:xam_shoes_app/core/translations/translation_keys.dart';
-import 'package:xam_shoes_app/ui/views/sign_in/sign_in_screen.dart';
+import 'package:skin_care/core/constants/color_constants.dart';
+import 'package:skin_care/core/translations/translation_keys.dart';
+import 'package:skin_care/ui/views/sign_in/sign_in_screen.dart';
 
 class LoginSignInButton extends StatelessWidget {
   const LoginSignInButton({

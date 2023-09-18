@@ -1,15 +1,11 @@
-/*
-Author: XamDesign
-Date: 25.05.2023
-*/
 
 import 'dart:ui';
 
 import 'package:get/get.dart';
-import 'package:xam_shoes_app/core/data/shoe_list.dart';
+import 'package:skin_care/core/data/product_list.dart';
 
 class DetailController extends GetxController {
-  Rx<Color> selectedColor = shoeList.first.colors.first.obs;
+  Rx<Color> selectedColor = productList.first.colors.first.obs;
   RxBool showDetails = false.obs;
 
   void changeColor(Color color) {
@@ -17,6 +13,6 @@ class DetailController extends GetxController {
   }
 
   void reset() {
-    selectedColor.value = shoeList.first.colors.first;
+    selectedColor.value = productList.first.colors.first;
   }
 }

@@ -1,16 +1,13 @@
-/*
-Author: XamDesign
-Date: 8.06.2023
-*/
+
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'package:xam_shoes_app/core/translations/translation_keys.dart';
-import 'package:xam_shoes_app/core/utils/device_utils.dart';
-import 'package:xam_shoes_app/ui/views/cards/components/cards_card_holder_field.dart';
-import 'package:xam_shoes_app/ui/views/cards/components/cards_card_number_field.dart';
-import 'package:xam_shoes_app/ui/views/cards/components/cards_done_button.dart';
+import 'package:skin_care/core/translations/translation_keys.dart';
+import 'package:skin_care/core/utils/device_utils.dart';
+import 'package:skin_care/ui/views/cards/components/cards_card_holder_field.dart';
+import 'package:skin_care/ui/views/cards/components/cards_card_number_field.dart';
+import 'package:skin_care/ui/views/cards/components/cards_done_button.dart';
 
 class CardsForm extends StatefulWidget {
   const CardsForm({

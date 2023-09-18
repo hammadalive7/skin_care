@@ -1,12 +1,9 @@
-/*
-Author: XamDesign
-Date: 8.06.2023
-*/
+
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:xam_shoes_app/core/data/language_list.dart';
-import 'package:xam_shoes_app/core/models/language_model.dart';
+import 'package:skin_care/core/data/language_list.dart';
+import 'package:skin_care/core/models/language_model.dart';
 
 class SettingsController extends GetxController {
   GlobalKey<FormState> changeAccountInfoFormKey = GlobalKey<FormState>();

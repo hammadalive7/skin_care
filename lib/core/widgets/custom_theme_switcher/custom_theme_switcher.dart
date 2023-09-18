@@ -1,15 +1,12 @@
-/*
-Author: XamDesign
-Date: 24.05.2023
-*/
+
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get_utils/get_utils.dart';
-import 'package:xam_shoes_app/core/constants/color_constants.dart';
-import 'package:xam_shoes_app/core/utils/base/base_controller.dart';
-import 'package:xam_shoes_app/core/utils/base/base_statefull.dart';
-import 'package:xam_shoes_app/core/widgets/custom_theme_switcher/custom_theme_switcher_button.dart';
+import 'package:skin_care/core/constants/color_constants.dart';
+import 'package:skin_care/core/utils/base/base_controller.dart';
+import 'package:skin_care/core/utils/base/base_statefull.dart';
+import 'package:skin_care/core/widgets/custom_theme_switcher/custom_theme_switcher_button.dart';
 
 class CustomThemeSwitcher extends StatefulWidget {
   const CustomThemeSwitcher({

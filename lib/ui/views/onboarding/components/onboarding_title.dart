@@ -1,14 +1,10 @@
-/*
-Author: XamDesign
-Date: 20.05.2023
-*/
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'package:xam_shoes_app/core/translations/translation_keys.dart';
-import 'package:xam_shoes_app/ui/views/onboarding/components/onboarding_bordered_title_text.dart';
-import 'package:xam_shoes_app/ui/views/onboarding/components/onboarding_title_text.dart';
+import 'package:skin_care/core/translations/translation_keys.dart';
+import 'package:skin_care/ui/views/onboarding/components/onboarding_bordered_title_text.dart';
+import 'package:skin_care/ui/views/onboarding/components/onboarding_title_text.dart';
 
 class OnboardingTitle extends StatelessWidget {
   const OnboardingTitle({Key? key}) : super(key: key);
@@ -29,7 +25,7 @@ class OnboardingTitle extends StatelessWidget {
           text: TranslationKeys.onboardingTitleLine3.tr,
         ),
         OnboardingTitleText(
-          text: TranslationKeys.onboardingTitleLine4.tr,
+          text: "Products".tr,
         ),
       ],
     );

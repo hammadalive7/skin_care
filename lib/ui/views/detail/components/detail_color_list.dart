@@ -1,11 +1,7 @@
-/*
-Author: XamDesign
-Date: 29.05.2023
-*/
 
 import 'package:flutter/material.dart';
 
-import 'package:xam_shoes_app/ui/views/detail/components/detail_color_item.dart';
+import 'package:skin_care/ui/views/detail/components/detail_color_item.dart';
 
 class DetailColorList extends StatefulWidget {
   final List<Color> colors;

@@ -1,7 +1,3 @@
-/*
-Author: XamDesign
-Date: 14.06.2023
-*/
 
 class TranslationKeys {
   // Splash
@@ -88,7 +84,7 @@ class TranslationKeys {
 
   // Search
   static const String search = "search";
-  static const String searchForShoes = "search_for_shoes";
+  static const String searchForProduct = "search_for_shoes";
   static const String lastSeen = "last_seen";
   static const String lastSearch = "last_search";
   static const String price = "price";

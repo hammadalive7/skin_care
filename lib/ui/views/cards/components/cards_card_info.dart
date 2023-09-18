@@ -1,17 +1,13 @@
-/*
-Author: XamDesign
-Date: 8.06.2023
-*/
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 
-import 'package:xam_shoes_app/core/constants/color_constants.dart';
-import 'package:xam_shoes_app/core/data/card_brand_list.dart';
-import 'package:xam_shoes_app/core/utils/base/base_controller.dart';
-import 'package:xam_shoes_app/core/utils/base/base_stateless.dart';
-import 'package:xam_shoes_app/core/utils/device_utils.dart';
+import 'package:skin_care/core/constants/color_constants.dart';
+import 'package:skin_care/core/data/card_brand_list.dart';
+import 'package:skin_care/core/utils/base/base_controller.dart';
+import 'package:skin_care/core/utils/base/base_stateless.dart';
+import 'package:skin_care/core/utils/device_utils.dart';
 
 class CardsCardInfo extends BaseStatelessWidget {
   const CardsCardInfo({

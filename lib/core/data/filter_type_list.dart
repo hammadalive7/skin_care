@@ -1,9 +1,6 @@
-/*
-Author: XamDesign
-Date: 27.05.2023
-*/
 
-import 'package:xam_shoes_app/core/models/filter_type_model.dart';
+
+import 'package:skin_care/core/models/filter_type_model.dart';
 
 List<FilterType> filterTypeList = [
   FilterType(id: 0, icon: "assets/images/gender_man.svg"),

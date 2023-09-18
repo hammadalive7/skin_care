@@ -1,13 +1,10 @@
-/*
-Author: XamDesign
-Date: 27.05.2023
-*/
+
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:xam_shoes_app/core/constants/color_constants.dart';
-import 'package:xam_shoes_app/core/utils/base/base_controller.dart';
-import 'package:xam_shoes_app/core/utils/base/base_statefull.dart';
+import 'package:skin_care/core/constants/color_constants.dart';
+import 'package:skin_care/core/utils/base/base_controller.dart';
+import 'package:skin_care/core/utils/base/base_statefull.dart';
 
 class CustomPriceRangeSlider extends StatefulWidget {
   final double rangeStartValue;

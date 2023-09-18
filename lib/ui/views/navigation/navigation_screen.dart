@@ -1,21 +1,17 @@
-/*
-Author: XamDesign
-Date: 22.05.2023
-*/
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'package:xam_shoes_app/core/utils/base/base_controller.dart';
-import 'package:xam_shoes_app/core/utils/base/base_statefull.dart';
-import 'package:xam_shoes_app/core/utils/device_utils.dart';
-import 'package:xam_shoes_app/core/widgets/custom_drawer/custom_drawer.dart';
-import 'package:xam_shoes_app/ui/views/cart/cart_screen.dart';
-import 'package:xam_shoes_app/ui/views/discover/discover_screen.dart';
-import 'package:xam_shoes_app/ui/views/home/home_screen.dart';
-import 'package:xam_shoes_app/ui/views/message/message_screen.dart';
-import 'package:xam_shoes_app/ui/views/profile/profile_screen.dart';
-import 'package:xam_shoes_app/ui/views/navigation/components/navigation_bottom_bar.dart';
+import 'package:skin_care/core/utils/base/base_controller.dart';
+import 'package:skin_care/core/utils/base/base_statefull.dart';
+import 'package:skin_care/core/utils/device_utils.dart';
+import 'package:skin_care/core/widgets/custom_drawer/custom_drawer.dart';
+import 'package:skin_care/ui/views/cart/cart_screen.dart';
+import 'package:skin_care/ui/views/discover/discover_screen.dart';
+import 'package:skin_care/ui/views/home/home_screen.dart';
+import 'package:skin_care/ui/views/message/message_screen.dart';
+import 'package:skin_care/ui/views/profile/profile_screen.dart';
+import 'package:skin_care/ui/views/navigation/components/navigation_bottom_bar.dart';
 
 class NavigationScreen extends StatefulWidget {
   const NavigationScreen({Key? key}) : super(key: key);
@@ -29,7 +25,7 @@ class _NavigationScreenState extends BaseState<NavigationScreen> {
     const HomeScreen(),
     const DiscoverScreen(),
     const CartScreen(),
-    const MessageScreen(),
+    // const MessageScreen(),
     const ProfileScreen(),
   ];
 

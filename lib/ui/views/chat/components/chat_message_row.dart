@@ -1,13 +1,9 @@
-/*
-Author: XamDesign
-Date: 7.06.2023
-*/
 
 import 'package:flutter/material.dart';
-import 'package:xam_shoes_app/core/models/message_model.dart';
-import 'package:xam_shoes_app/core/utils/device_utils.dart';
-import 'package:xam_shoes_app/ui/views/chat/components/chat_message_avatar.dart';
-import 'package:xam_shoes_app/ui/views/chat/components/chat_message_tile.dart';
+import 'package:skin_care/core/models/message_model.dart';
+import 'package:skin_care/core/utils/device_utils.dart';
+import 'package:skin_care/ui/views/chat/components/chat_message_avatar.dart';
+import 'package:skin_care/ui/views/chat/components/chat_message_tile.dart';
 
 class ChatMessageRow extends StatelessWidget {
   final Message message;

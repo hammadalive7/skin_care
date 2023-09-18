@@ -1,7 +1,4 @@
-/*
-Author: XamDesign
-Date: 8.06.2023
-*/
+
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';

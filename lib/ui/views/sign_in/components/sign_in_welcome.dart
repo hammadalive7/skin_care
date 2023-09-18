@@ -1,12 +1,8 @@
-/*
-Author: XamDesign
-Date: 22.05.2023
-*/
 
 import 'package:flutter/material.dart';
 
-import 'package:xam_shoes_app/ui/views/sign_in/components/sign_in_description.dart';
-import 'package:xam_shoes_app/ui/views/sign_in/components/sign_in_title.dart';
+import 'package:skin_care/ui/views/sign_in/components/sign_in_description.dart';
+import 'package:skin_care/ui/views/sign_in/components/sign_in_title.dart';
 
 class SignInWelcome extends StatelessWidget {
   const SignInWelcome({

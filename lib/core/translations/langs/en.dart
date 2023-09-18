@@ -1,21 +1,18 @@
-/*
-Author: XamDesign
-Date: 15.06.2023
-*/
 
-import 'package:xam_shoes_app/core/translations/translation_keys.dart';
+
+import 'package:skin_care/core/translations/translation_keys.dart';
 
 const Map<String, String> enTranslations = {
   // Splash
-  TranslationKeys.splashText: "Discover all trendy shoes",
+  TranslationKeys.splashText: "Discover all trendy Products",
 
   // Onboarding
   TranslationKeys.onboardingTitleLine1: "The",
   TranslationKeys.onboardingTitleLine2: "Awesome",
   TranslationKeys.onboardingTitleLine3: "Branded",
-  TranslationKeys.onboardingTitleLine4: "Shoes",
+  TranslationKeys.onboardingTitleLine4: "Products",
   TranslationKeys.onboardingDescription:
-      "Enjoy your vacation with our super comfy shoes",
+      "Enjoy your vacation with our super comfy Products",
   TranslationKeys.getStarted: "Get Started",
 
   // Auth
@@ -65,7 +62,7 @@ const Map<String, String> enTranslations = {
 
   // Detail
   TranslationKeys.detail: "Detail",
-  TranslationKeys.sneakers: "Sneakers",
+  TranslationKeys.sneakers: "Skin Care",
   TranslationKeys.structure: "Structure",
   TranslationKeys.outerMaterial: "Outer Material",
   TranslationKeys.lining: "Lining",
@@ -83,19 +80,19 @@ const Map<String, String> enTranslations = {
 
   // Discover
   TranslationKeys.discoverAll: "Discover All",
-  TranslationKeys.discoverTitleLine1: "@count Shoes Are",
+  TranslationKeys.discoverTitleLine1: "@count Products Are",
   TranslationKeys.discoverTitleLine2: "Available",
 
   // Category
   TranslationKeys.category: "Category",
   TranslationKeys.allCategories: "All Categories",
-  TranslationKeys.categoryTitleLine1: "Shoes Available For",
-  TranslationKeys.categoryTitleLine2: "@shoe",
+  TranslationKeys.categoryTitleLine1: "Products Available For",
+  TranslationKeys.categoryTitleLine2: "@product",
   TranslationKeys.view: "View",
 
   // Search
   TranslationKeys.search: "Search",
-  TranslationKeys.searchForShoes: "Search for shoes",
+  TranslationKeys.searchForProduct: "Search for Products",
   TranslationKeys.lastSeen: "Last Seen",
   TranslationKeys.lastSearch: "Last Search",
   TranslationKeys.price: "Price",
@@ -235,6 +232,6 @@ const Map<String, String> enTranslations = {
   TranslationKeys.cvvTitle: "CVV",
   TranslationKeys.cvvHint: "CVV",
 
-  // Shoe
+  // Product
   TranslationKeys.last: "Last",
 };

@@ -1,9 +1,6 @@
 // ignore_for_file: prefer_final_locals
 
-/*
-Author: XamDesign
-Date: 3.06.2023
-*/
+
 
 import 'dart:math';
 

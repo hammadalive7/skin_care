@@ -1,13 +1,9 @@
-/*
-Author: XamDesign
-Date: 3.06.2023
-*/
 
 import 'package:flutter/material.dart';
 import 'package:get/get_utils/get_utils.dart';
-import 'package:xam_shoes_app/ui/views/checkout/components/checkout_delivery_address_card_description.dart';
-import 'package:xam_shoes_app/ui/views/checkout/components/checkout_delivery_address_card_edit_button.dart';
-import 'package:xam_shoes_app/ui/views/checkout/components/checkout_delivery_address_card_title.dart';
+import 'package:skin_care/ui/views/checkout/components/checkout_delivery_address_card_description.dart';
+import 'package:skin_care/ui/views/checkout/components/checkout_delivery_address_card_edit_button.dart';
+import 'package:skin_care/ui/views/checkout/components/checkout_delivery_address_card_title.dart';
 
 class CheckoutDeliveryAddressCard extends StatelessWidget {
   const CheckoutDeliveryAddressCard({

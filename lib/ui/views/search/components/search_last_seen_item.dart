@@ -1,21 +1,17 @@
-/*
-Author: XamDesign
-Date: 25.05.2023
-*/
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:xam_shoes_app/core/constants/color_constants.dart';
-import 'package:xam_shoes_app/core/models/shoe_model.dart';
-import 'package:xam_shoes_app/core/utils/base/base_controller.dart';
-import 'package:xam_shoes_app/core/widgets/custom_material_button.dart';
-import 'package:xam_shoes_app/ui/views/detail/detail_screen.dart';
+import 'package:skin_care/core/constants/color_constants.dart';
+import 'package:skin_care/core/models/product_model.dart';
+import 'package:skin_care/core/utils/base/base_controller.dart';
+import 'package:skin_care/core/widgets/custom_material_button.dart';
+import 'package:skin_care/ui/views/detail/detail_screen.dart';
 
 class SearchLastSeenItem extends StatelessWidget {
-  final Shoe shoe;
+  final Product product;
 
   const SearchLastSeenItem({
-    required this.shoe,
+    required this.product,
     super.key,
   });
 
@@ -33,12 +29,12 @@ class SearchLastSeenItem extends StatelessWidget {
                 : kLightFieldColor,
             borderRadius: BorderRadius.circular(16.0),
             onTap: () {
-              Get.to(() => DetailScreen(shoe: shoe));
+              Get.to(() => DetailScreen(product: product));
             },
             child: Container(
               padding: const EdgeInsets.all(16.0),
               child: Image.asset(
-                shoe.images.first,
+                product.images.first,
                 width: 24,
               ),
             ),

@@ -1,14 +1,10 @@
-/*
-Author: XamDesign
-Date: 9.06.2023
-*/
 
 import 'package:flutter/material.dart';
 
-import 'package:xam_shoes_app/core/utils/device_utils.dart';
-import 'package:xam_shoes_app/ui/views/profile/components/profile_email_text.dart';
-import 'package:xam_shoes_app/ui/views/profile/components/profile_name_text.dart';
-import 'package:xam_shoes_app/ui/views/profile/components/profile_phone_number_text.dart';
+import 'package:skin_care/core/utils/device_utils.dart';
+import 'package:skin_care/ui/views/profile/components/profile_email_text.dart';
+import 'package:skin_care/ui/views/profile/components/profile_name_text.dart';
+import 'package:skin_care/ui/views/profile/components/profile_phone_number_text.dart';
 
 class ProfileForm extends StatefulWidget {
   const ProfileForm({

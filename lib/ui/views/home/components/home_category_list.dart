@@ -1,11 +1,7 @@
-/*
-Author: XamDesign
-Date: 25.05.2023
-*/
 
 import 'package:flutter/material.dart';
-import 'package:xam_shoes_app/core/utils/device_utils.dart';
-import 'package:xam_shoes_app/ui/views/home/components/home_category_item.dart';
+import 'package:skin_care/core/utils/device_utils.dart';
+import 'package:skin_care/ui/views/home/components/home_category_item.dart';
 
 class HomeCategoryList extends StatelessWidget {
   const HomeCategoryList({
@@ -25,38 +21,38 @@ class HomeCategoryList extends StatelessWidget {
         children: const [
           HomeCategoryItem(
             category: 0,
-            icon: "",
+            icon: "assets/images/nike_logo.svg",
             title: "All",
           ),
           HomeCategoryItem(
             category: 1,
             icon: "assets/images/nike_logo.svg",
-            title: "Nike",
+            title: "Face Wash",
           ),
           HomeCategoryItem(
             category: 2,
             icon: "assets/images/adidas_logo.svg",
-            title: "Adidas",
+            title: "Scrubs",
           ),
           HomeCategoryItem(
             category: 3,
             icon: "assets/images/puma_logo.svg",
-            title: "Puma",
+            title: "Moisturizers",
           ),
           HomeCategoryItem(
             category: 4,
             icon: "assets/images/nike_logo.svg",
-            title: "Nike",
+            title: "Sunscreen",
           ),
           HomeCategoryItem(
             category: 5,
             icon: "assets/images/adidas_logo.svg",
-            title: "Adidas",
+            title: "Face Masks",
           ),
           HomeCategoryItem(
             category: 6,
             icon: "assets/images/puma_logo.svg",
-            title: "Puma",
+            title: "Face Packs",
           ),
         ],
       ),

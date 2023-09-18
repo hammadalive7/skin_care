@@ -1,14 +1,11 @@
-/*
-Author: XamDesign
-Date: 23.05.2023
-*/
+
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get_utils/get_utils.dart';
-import 'package:xam_shoes_app/core/constants/color_constants.dart';
-import 'package:xam_shoes_app/core/utils/base/base_stateless.dart';
-import 'package:xam_shoes_app/core/widgets/custom_text_field/custom_multiline_text_field.dart';
+import 'package:skin_care/core/constants/color_constants.dart';
+import 'package:skin_care/core/utils/base/base_stateless.dart';
+import 'package:skin_care/core/widgets/custom_text_field/custom_multiline_text_field.dart';
 
 class CustomMultilineTextFieldWithTitle extends BaseStatelessWidget {
   final TextEditingController? controller;

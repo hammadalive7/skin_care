@@ -1,11 +1,7 @@
-/*
-Author: XamDesign
-Date: 15.06.2023
-*/
+
 
 import 'package:get/get.dart';
-
-import 'package:xam_shoes_app/core/translations/translation_keys.dart';
+import 'package:skin_care/core/translations/translation_keys.dart';
 
 enum OrderStatus {
   pending,

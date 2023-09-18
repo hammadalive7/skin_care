@@ -1,11 +1,7 @@
-/*
-Author: XamDesign
-Date: 20.05.2023
-*/
 
 import 'package:flutter/material.dart';
 
-import 'package:xam_shoes_app/core/utils/text/text_outlined_style.dart';
+import 'package:skin_care/core/utils/text/text_outlined_style.dart';
 import 'package:get/get_utils/get_utils.dart';
 
 class OnboardingBorderedTitleText extends StatelessWidget {

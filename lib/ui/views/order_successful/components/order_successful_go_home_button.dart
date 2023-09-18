@@ -1,17 +1,13 @@
-/*
-Author: XamDesign
-Date: 3.06.2023
-*/
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'package:xam_shoes_app/core/translations/translation_keys.dart';
-import 'package:xam_shoes_app/core/utils/base/base_controller.dart';
-import 'package:xam_shoes_app/core/utils/base/base_stateless.dart';
-import 'package:xam_shoes_app/core/utils/device_utils.dart';
-import 'package:xam_shoes_app/core/widgets/custom_submit_button.dart';
-import 'package:xam_shoes_app/ui/views/navigation/navigation_screen.dart';
+import 'package:skin_care/core/translations/translation_keys.dart';
+import 'package:skin_care/core/utils/base/base_controller.dart';
+import 'package:skin_care/core/utils/base/base_stateless.dart';
+import 'package:skin_care/core/utils/device_utils.dart';
+import 'package:skin_care/core/widgets/custom_submit_button.dart';
+import 'package:skin_care/ui/views/navigation/navigation_screen.dart';
 
 class OrderSuccessfulGoHomeButton extends BaseStatelessWidget {
   const OrderSuccessfulGoHomeButton({
@@ -19,7 +15,7 @@ class OrderSuccessfulGoHomeButton extends BaseStatelessWidget {
   });
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context){
     return Padding(
       padding: EdgeInsets.all(
         DeviceUtils.getDynamicWidth(context, 0.05),

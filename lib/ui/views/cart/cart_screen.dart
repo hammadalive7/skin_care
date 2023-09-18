@@ -1,12 +1,9 @@
-/*
-Author: XamDesign
-Date: 25.05.2023
-*/
+
 
 import 'package:flutter/material.dart';
 
-import 'package:xam_shoes_app/ui/views/cart/components/cart_app_bar.dart';
-import 'package:xam_shoes_app/ui/views/cart/components/cart_body.dart';
+import 'package:skin_care/ui/views/cart/components/cart_app_bar.dart';
+import 'package:skin_care/ui/views/cart/components/cart_body.dart';
 
 class CartScreen extends StatelessWidget {
   const CartScreen({Key? key}) : super(key: key);

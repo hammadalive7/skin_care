@@ -1,17 +1,13 @@
-/*
-Author: XamDesign
-Date: 8.06.2023
-*/
 
 import 'package:flutter/material.dart';
 
-import 'package:xam_shoes_app/core/models/shoe_model.dart';
-import 'package:xam_shoes_app/core/utils/base/base_stateless.dart';
-import 'package:xam_shoes_app/ui/views/review/components/review_app_bar.dart';
-import 'package:xam_shoes_app/ui/views/review/components/review_body.dart';
+import 'package:skin_care/core/models/product_model.dart';
+import 'package:skin_care/core/utils/base/base_stateless.dart';
+import 'package:skin_care/ui/views/review/components/review_app_bar.dart';
+import 'package:skin_care/ui/views/review/components/review_body.dart';
 
 class ReviewScreen extends BaseStatelessWidget {
-  final Shoe product;
+  final Product product;
 
   const ReviewScreen({required this.product, super.key});
 

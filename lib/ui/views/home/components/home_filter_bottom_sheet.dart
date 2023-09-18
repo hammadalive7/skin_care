@@ -1,17 +1,13 @@
-/*
-Author: XamDesign
-Date: 26.05.2023
-*/
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'package:xam_shoes_app/core/translations/translation_keys.dart';
-import 'package:xam_shoes_app/core/widgets/custom_bottom_sheet/custom_bottom_sheet.dart';
-import 'package:xam_shoes_app/ui/views/home/components/home_filter_apply_button.dart';
-import 'package:xam_shoes_app/ui/views/home/components/home_filter_categories.dart';
-import 'package:xam_shoes_app/ui/views/home/components/home_filter_price_range.dart';
-import 'package:xam_shoes_app/ui/views/home/components/home_filter_type.dart';
+import 'package:skin_care/core/translations/translation_keys.dart';
+import 'package:skin_care/core/widgets/custom_bottom_sheet/custom_bottom_sheet.dart';
+import 'package:skin_care/ui/views/home/components/home_filter_apply_button.dart';
+import 'package:skin_care/ui/views/home/components/home_filter_categories.dart';
+import 'package:skin_care/ui/views/home/components/home_filter_price_range.dart';
+import 'package:skin_care/ui/views/home/components/home_filter_type.dart';
 
 class HomeFilterBottomSheet extends StatefulWidget {
   const HomeFilterBottomSheet({
@@ -31,7 +27,7 @@ class _HomeFilterBottomSheetState extends State<HomeFilterBottomSheet> {
         children: [
           HomeFilterPriceRange(),
           HomeFilterType(),
-          HomeFilterCategories(),
+          // HomeFilterCategories(),
           SizedBox(height: 16.0),
           HomeFilterApplyButton(),
         ],

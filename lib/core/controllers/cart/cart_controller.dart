@@ -1,16 +1,15 @@
-/*
-Author: XamDesign
-Date: 25.05.2023
-*/
+
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:xam_shoes_app/core/data/shoe_list.dart';
-import 'package:xam_shoes_app/core/models/cart_item_model.dart';
-import 'package:xam_shoes_app/core/translations/translation_keys.dart';
-import 'package:xam_shoes_app/core/utils/base/base_controller.dart';
-import 'package:xam_shoes_app/core/widgets/custom_loading_button.dart';
-import 'package:xam_shoes_app/core/widgets/custom_warning_alert/custom_warning_alert.dart';
+
+import '../../data/product_list.dart';
+import '../../models/cart_item_model.dart';
+import '../../translations/translation_keys.dart';
+import '../../utils/base/base_controller.dart';
+import '../../widgets/custom_loading_button.dart';
+import '../../widgets/custom_warning_alert/custom_warning_alert.dart';
+
 
 class CartController extends GetxController {
   RxList<CartItem> cartItemList = <CartItem>[].obs;
@@ -20,28 +19,28 @@ class CartController extends GetxController {
   final RoundedLoadingButtonController addToCartButtonController =
   RoundedLoadingButtonController();
 
-  bool addItemToCart(int shoeId) {
-    final shoeItem =
-    cartItemList.firstWhereOrNull((item) => item.shoe.id == shoeId);
-    if (shoeItem == null) {
+  bool addItemToCart(int productId) {
+    final productItem =
+    cartItemList.firstWhereOrNull((item) => item.product.id == productId);
+    if (productItem == null) {
       cartItemList.add(
         CartItem(
-          shoe: shoeList.firstWhere((shoe) => shoe.id == shoeId),
+          product: productList.firstWhere((shoe) => shoe.id == productId),
           piece: 1.obs,
         ),
       );
       calculateTotal();
       return true;
     } else {
-      if (shoeList
-          .firstWhere((shoe) => shoe.id == shoeId)
+      if (productList
+          .firstWhere((shoe) => shoe.id == productId)
           .stock ==
-          shoeItem.piece.value) {
+          productItem.piece.value) {
         calculateTotal();
         return false;
       }
       cartItemList
-          .firstWhere((item) => item.shoe.id == shoeId)
+          .firstWhere((item) => item.product.id == productId)
           .piece++;
       calculateTotal();
       return true;
@@ -49,7 +48,7 @@ class CartController extends GetxController {
   }
 
   void increaseCartItemPiece(int index) {
-    if (cartItemList[index].piece.value == cartItemList[index].shoe.stock) {
+    if (cartItemList[index].piece.value == cartItemList[index].product.stock) {
       return;
     }
     cartItemList[index].piece++;
@@ -89,10 +88,10 @@ class CartController extends GetxController {
   void calculateTotal() {
     cartTotal.value = 0.0;
     for (final cartItem in cartItemList) {
-      cartTotal.value += (cartItem.shoe.discountRate != null
+      cartTotal.value += (cartItem.product.discountRate != null
           ? calculateDiscount(
-          cartItem.shoe.retailPrice, cartItem.shoe.discountRate!)
-          : cartItem.shoe.retailPrice) *
+          cartItem.product.retailPrice, cartItem.product.discountRate!)
+          : cartItem.product.retailPrice) *
           cartItem.piece.value;
     }
     cartTotalWithShippingCost.value = cartTotal.value + shippingCost.value;

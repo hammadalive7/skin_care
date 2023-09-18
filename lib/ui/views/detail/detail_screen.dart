@@ -1,20 +1,16 @@
-/*
-Author: XamDesign
-Date: 29.05.2023
-*/
 
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
-import 'package:xam_shoes_app/core/models/shoe_model.dart';
-import 'package:xam_shoes_app/core/utils/base/base_controller.dart';
-import 'package:xam_shoes_app/ui/views/detail/components/detail_add_to_cart_button.dart';
-import 'package:xam_shoes_app/ui/views/detail/components/detail_app_bar.dart';
-import 'package:xam_shoes_app/ui/views/detail/components/detail_body.dart';
+import 'package:skin_care/core/models/product_model.dart';
+import 'package:skin_care/core/utils/base/base_controller.dart';
+import 'package:skin_care/ui/views/detail/components/detail_add_to_cart_button.dart';
+import 'package:skin_care/ui/views/detail/components/detail_app_bar.dart';
+import 'package:skin_care/ui/views/detail/components/detail_body.dart';
 
 class DetailScreen extends StatefulWidget {
-  final Shoe shoe;
+  final Product product;
 
-  const DetailScreen({required this.shoe, Key? key}) : super(key: key);
+  const DetailScreen({required this.product, Key? key}) : super(key: key);
 
   @override
   State<DetailScreen> createState() => _DetailScreenState();
@@ -23,7 +19,7 @@ class DetailScreen extends StatefulWidget {
 class _DetailScreenState extends State<DetailScreen> {
   @override
   void initState() {
-    BaseController.detailController.changeColor(widget.shoe.colors.first);
+    BaseController.detailController.changeColor(widget.product.colors.first);
     super.initState();
   }
 
@@ -31,18 +27,18 @@ class _DetailScreenState extends State<DetailScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const DetailAppBar(),
-      body: DetailBody(shoe: widget.shoe),
+      body: DetailBody(product: widget.product),
       floatingActionButton: SlideInRight(
         from: 10,
         duration: const Duration(milliseconds: 800),
         child: DetailAddToCartButton(
-          shoeId: widget.shoe.id,
-          retailPrice: widget.shoe.discountRate != null
+          productId: widget.product.id,
+          retailPrice: widget.product.discountRate != null
               ? BaseController.homeController
                   .calculateDiscount(
-                      widget.shoe.retailPrice, widget.shoe.discountRate!)
+                      widget.product.retailPrice, widget.product.discountRate!)
                   .toStringAsFixed(2)
-              : widget.shoe.retailPrice.toString(),
+              : widget.product.retailPrice.toString(),
         ),
       ),
     );

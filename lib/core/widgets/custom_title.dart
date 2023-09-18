@@ -1,11 +1,8 @@
-/*
-Author: XamDesign
-Date: 24.05.2023
-*/
+
 
 import 'package:flutter/material.dart';
 import 'package:get/get_utils/get_utils.dart';
-import 'package:xam_shoes_app/core/utils/base/base_stateless.dart';
+import 'package:skin_care/core/utils/base/base_stateless.dart';
 
 class CustomTitle extends BaseStatelessWidget {
   final String titleTop;

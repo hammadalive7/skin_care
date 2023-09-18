@@ -1,20 +1,16 @@
-/*
-Author: XamDesign
-Date: 30.05.2023
-*/
 
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
-import 'package:xam_shoes_app/core/models/shoe_model.dart';
-import 'package:xam_shoes_app/ui/views/detail/components/detail_info.dart';
-import 'package:xam_shoes_app/ui/views/detail/components/detail_properties.dart';
-import 'package:xam_shoes_app/ui/views/detail/components/detail_shoe_image.dart';
+import 'package:skin_care/core/models/product_model.dart';
+import 'package:skin_care/ui/views/detail/components/detail_info.dart';
+import 'package:skin_care/ui/views/detail/components/detail_properties.dart';
+import 'package:skin_care/ui/views/detail/components/detail_product_image.dart';
 
 class DetailBody extends StatelessWidget {
-  final Shoe shoe;
+  final Product product;
 
   const DetailBody({
-    required this.shoe,
+    required this.product,
     super.key,
   });
 
@@ -24,15 +20,15 @@ class DetailBody extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          DetailShoeImage(shoe: shoe),
+          DetailProductImage(product: product),
           FadeInUp(
               from: 5,
               duration: const Duration(milliseconds: 400),
-              child: DetailInfo(model: shoe.model, colors: shoe.colors)),
+              child: DetailInfo(model: product.model, colors: product.colors)),
           FadeInUp(
               from: 10,
               duration: const Duration(milliseconds: 600),
-              child: DetailProperties(shoe: shoe)),
+              child: DetailProperties(product: product)),
         ],
       ),
     );

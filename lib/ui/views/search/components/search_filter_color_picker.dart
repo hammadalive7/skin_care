@@ -1,11 +1,7 @@
-/*
-Author: XamDesign
-Date: 3.06.2023
-*/
 
 import 'package:flutter/material.dart';
-import 'package:xam_shoes_app/core/utils/base/base_controller.dart';
-import 'package:xam_shoes_app/core/widgets/custom_color_picker.dart';
+import 'package:skin_care/core/utils/base/base_controller.dart';
+import 'package:skin_care/core/widgets/custom_color_picker.dart';
 
 class SearchFilterColorPicker extends StatelessWidget {
   const SearchFilterColorPicker({super.key});
@@ -20,7 +16,7 @@ class SearchFilterColorPicker extends StatelessWidget {
         cornerRadius: 10,
         pickMode: PickMode.color,
         colorListener: (int value) =>
-            BaseController.searchShoeController.changeFilterColor(Color(value)),
+            BaseController.searchProductController.changeFilterColor(Color(value)),
       ),
     );
   }

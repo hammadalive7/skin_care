@@ -1,13 +1,9 @@
-/*
-Author: XamDesign
-Date: 24.05.2023
-*/
 
 import 'package:flutter/material.dart';
-import 'package:xam_shoes_app/core/data/shoe_list.dart';
-import 'package:xam_shoes_app/core/utils/device_utils.dart';
-import 'package:xam_shoes_app/ui/views/notification/components/notification_item.dart';
-import 'package:xam_shoes_app/ui/views/notification/components/notification_time_title.dart';
+import 'package:skin_care/core/data/product_list.dart';
+import 'package:skin_care/core/utils/device_utils.dart';
+import 'package:skin_care/ui/views/notification/components/notification_item.dart';
+import 'package:skin_care/ui/views/notification/components/notification_time_title.dart';
 
 class NotificationList extends StatelessWidget {
   const NotificationList({
@@ -24,13 +20,13 @@ class NotificationList extends StatelessWidget {
         children: [
           const NotificationTimeTitle(title: "Today"),
           NotificationItem(
-            image: shoeList[0].images.first,
+            image: productList[0].images.first,
             title: "New shoe added to your collection",
             description: "7 new shoe added",
             isNew: true,
           ),
           NotificationItem(
-            image: shoeList[1].images.first,
+            image: productList[1].images.first,
             title: "Found new shoes with blast offer",
             description: "7 new shoe added",
             isNew: true,
@@ -41,7 +37,7 @@ class NotificationList extends StatelessWidget {
           ),
           const NotificationTimeTitle(title: "Last Week"),
           NotificationItem(
-            image: shoeList[2].images.first,
+            image: productList[2].images.first,
             title: "Delivered successfully. Hope you are glad!",
             description: "10 mins ago",
           ),

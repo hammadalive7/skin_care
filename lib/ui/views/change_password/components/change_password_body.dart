@@ -1,14 +1,11 @@
-/*
-Author: XamDesign
-Date: 30.05.2023
-*/
+
 
 import 'package:flutter/material.dart';
 
-import 'package:xam_shoes_app/core/utils/base/base_stateless.dart';
-import 'package:xam_shoes_app/core/utils/device_utils.dart';
-import 'package:xam_shoes_app/ui/views/change_password/components/change_password_form.dart';
-import 'package:xam_shoes_app/ui/views/change_password/components/change_password_title.dart';
+import 'package:skin_care/core/utils/base/base_stateless.dart';
+import 'package:skin_care/core/utils/device_utils.dart';
+import 'package:skin_care/ui/views/change_password/components/change_password_form.dart';
+import 'package:skin_care/ui/views/change_password/components/change_password_title.dart';
 
 class ChangePasswordBody extends BaseStatelessWidget {
   const ChangePasswordBody({

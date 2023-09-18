@@ -1,14 +1,10 @@
-/*
-Author: XamDesign
-Date: 10.06.2023
-*/
 
 import 'package:flutter/material.dart';
-import 'package:xam_shoes_app/core/utils/base/base_stateless.dart';
-import 'package:xam_shoes_app/core/utils/device_utils.dart';
-import 'package:xam_shoes_app/ui/views/chat/components/chat_attachment_button.dart';
-import 'package:xam_shoes_app/ui/views/chat/components/chat_send_message_button.dart';
-import 'package:xam_shoes_app/ui/views/chat/components/chat_write_message_field.dart';
+import 'package:skin_care/core/utils/base/base_stateless.dart';
+import 'package:skin_care/core/utils/device_utils.dart';
+import 'package:skin_care/ui/views/chat/components/chat_attachment_button.dart';
+import 'package:skin_care/ui/views/chat/components/chat_send_message_button.dart';
+import 'package:skin_care/ui/views/chat/components/chat_write_message_field.dart';
 import 'package:get/get_utils/get_utils.dart';
 
 class ChatBottomBar extends BaseStatelessWidget {

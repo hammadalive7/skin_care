@@ -1,14 +1,10 @@
-/*
-Author: XamDesign
-Date: 9.06.2023
-*/
 
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
-import 'package:xam_shoes_app/core/utils/base/base_stateless.dart';
-import 'package:xam_shoes_app/core/utils/device_utils.dart';
-import 'package:xam_shoes_app/ui/views/profile/components/profile_form.dart';
-import 'package:xam_shoes_app/ui/views/profile/components/profile_photo.dart';
+import 'package:skin_care/core/utils/base/base_stateless.dart';
+import 'package:skin_care/core/utils/device_utils.dart';
+import 'package:skin_care/ui/views/profile/components/profile_form.dart';
+import 'package:skin_care/ui/views/profile/components/profile_photo.dart';
 
 class ProfileBody extends BaseStatelessWidget {
   const ProfileBody({
