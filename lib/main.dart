@@ -20,6 +20,11 @@ import 'package:skin_care/ui/views/splash/splash_screen.dart';
 import 'core/controllers/search/search_product_controller.dart';
 
 void main() {
+
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+
   Get
     ..put(AuthController())
     ..put(NavigationController())
