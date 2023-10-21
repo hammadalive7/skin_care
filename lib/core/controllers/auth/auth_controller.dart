@@ -1,12 +1,17 @@
 
 
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:google_sign_in/google_sign_in.dart';
+
+import '../../../ui/views/navigation/navigation_screen.dart';
 
 class AuthController extends GetxController {
   RxString resetPassword = "".obs;
   RxString confirmResetPassword = "".obs;
   RxBool loginRememberMe = false.obs;
+  final isGoogleLoading = false.obs;
 
   final formKey = GlobalKey<FormState>();
 
@@ -29,5 +34,53 @@ class AuthController extends GetxController {
   void reset() {
     resetPassword.value = "";
     confirmResetPassword.value = "";
+  }
+
+  Future<void> googleSignIn() async {
+    try{
+      isGoogleLoading .value = true;
+      await signInWithGoogle();
+      isGoogleLoading .value = false;
+      Get.offAll(()=> NavigationScreen());
+    }catch (e){
+      isGoogleLoading .value = false;
+      Get.snackbar("Error",  e.toString());
+
+    }
+  }
+
+
+  Future<UserCredential> signInWithGoogle() async {
+
+    try{
+      // Trigger the authentication flow
+      final googleUser = await GoogleSignIn().signIn();
+
+      // Obtain the auth details from the request
+      final googleAuth = await googleUser?.authentication;
+
+      // Create a new credential
+      final credential = GoogleAuthProvider.credential(
+        accessToken: googleAuth?.accessToken,
+        idToken: googleAuth?.idToken,
+      );
+      // Once signed in, return the UserCredential
+      final userCredential = await FirebaseAuth.instance.signInWithCredential(credential);
+      print(userCredential.user!.email);
+      print(userCredential.user!.displayName);
+      print(userCredential.user!.photoURL);
+      print(userCredential.user!.uid);
+      
+      return userCredential;
+
+    } on FirebaseException catch (e) {
+      final ex = e as FirebaseAuthException;
+      Get.snackbar("Error", ex.message ?? "Error");
+      throw ex.message! as Exception;
+    } catch (e) {
+      Get.snackbar("Error", e.toString());
+      throw e as Exception;
+    }
+
   }
 }

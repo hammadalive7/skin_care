@@ -104,7 +104,7 @@ class _HomeProductListState extends BaseState<HomeProductList> {
                                   ProductItemCartButton(
                                     productModel: productList[index],
                                   ),
-                                  if (productList[index].stock < 5) ProductStockLeft(index: index),
+                                  if (productList[index].stock! < 5) ProductStockLeft(index: index),
                                 ],
                               ),
                             );

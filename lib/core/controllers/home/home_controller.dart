@@ -44,4 +44,9 @@ class HomeController extends GetxController {
     filterTypeIndex.value = 0;
     filterCategoryIndex.value = 0;
   }
+
+
+
+
+
 }

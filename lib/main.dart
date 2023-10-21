@@ -1,3 +1,4 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:skin_care/core/constants/string_constants.dart';
@@ -17,17 +18,19 @@ import 'package:skin_care/core/controllers/track_location/track_location_control
 import 'package:skin_care/core/translations/languages.dart';
 import 'package:skin_care/ui/views/splash/splash_screen.dart';
 
-import 'core/controllers/search/search_product_controller.dart';
+import 'package:skin_care/core/controllers/search/search_product_controller.dart';
+import 'package:skin_care/firebase_options.dart';
 
-void main() {
+import 'core/controllers/product/product_controller.dart';
 
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
+void main() async {
+
+
 
   Get
     ..put(AuthController())
     ..put(NavigationController())
+    ..put(ProductController())
     ..put(HomeController())
     ..put(ThemeController())
     ..put(DetailController())
@@ -39,6 +42,10 @@ void main() {
     ..put(MessageController())
     ..put(SettingsController())
     ..put(TrackLocationController());
+
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const MyApp());
 }
 

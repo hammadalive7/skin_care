@@ -20,7 +20,7 @@ class SignInBody extends StatelessWidget {
           horizontal: DeviceUtils.getDynamicWidth(context, 0.07),
           vertical: 16.0,
         ),
-        child: const Column(
+        child:  Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SignInWelcome(),

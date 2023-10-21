@@ -7,13 +7,19 @@ import 'package:skin_care/core/translations/translation_keys.dart';
 import 'package:skin_care/core/utils/base/base_stateless.dart';
 import 'package:skin_care/core/utils/device_utils.dart';
 
+import '../controllers/auth/auth_controller.dart';
+
 class SignInWithGoogleButton extends BaseStatelessWidget {
-  const SignInWithGoogleButton({
+
+   SignInWithGoogleButton({
     super.key,
   });
 
+   final AuthController _controller = Get.find<AuthController>();
+
   @override
   Widget build(BuildContext context) {
+
     return Container(
       decoration: BoxDecoration(
         boxShadow: [
@@ -31,7 +37,9 @@ class SignInWithGoogleButton extends BaseStatelessWidget {
       height: DeviceUtils.getDynamicHeight(context, 0.06),
       padding: EdgeInsets.zero,
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: _controller.isGoogleLoading.value ? () {} : () async {
+          await _controller.googleSignIn();
+        },
         style: ElevatedButton.styleFrom(
           backgroundColor: Theme
               .of(context)

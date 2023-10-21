@@ -47,15 +47,15 @@ class _DetailPropertiesState extends State<DetailProperties> {
             const SizedBox(height: 16.0),
             DetailPropertyText(
               title: "${TranslationKeys.outerMaterial.tr}:",
-              description: widget.product.outerMaterial,
+              description: widget.product.category,
             ),
             DetailPropertyText(
               title: "${TranslationKeys.lining.tr}:",
-              description: widget.product.lining,
+              description: widget.product.tags,
             ),
             DetailPropertyText(
               title: "${TranslationKeys.sole.tr}:",
-              description: widget.product.sole,
+              description: widget.product.category,
             ),
             Offstage(
               offstage: !BaseController.detailController.showDetails.value,
@@ -68,11 +68,11 @@ class _DetailPropertiesState extends State<DetailProperties> {
                   ),
                   DetailPropertyText(
                     title: "${TranslationKeys.gender.tr}:",
-                    description: widget.product.gender,
+                    description: widget.product.description,
                   ),
                   DetailPropertyText(
                     title: "${TranslationKeys.year.tr}:",
-                    description: widget.product.releaseYear,
+                    description: widget.product.use,
                   ),
                 ],
               ),

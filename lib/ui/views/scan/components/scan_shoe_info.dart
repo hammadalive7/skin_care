@@ -45,7 +45,7 @@ class ScanProductInfo extends StatelessWidget {
                   ),
                   const SizedBox(height: 4.0),
                   Text(
-                    "${productList.first.gender} Running Shoes",
+                    "${productList.first.description} Running Shoes",
                     style: context.textTheme.bodyMedium?.copyWith(
                       color: kLightTextSecondaryColor,
                     ),
