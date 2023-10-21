@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "86691516119",
+    "project_id": "skin-care-app-d1ee9",
+    "storage_bucket": "skin-care-app-d1ee9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:86691516119:android:f93f65330c2c3710f1aa92",
+        "android_client_info": {
+          "package_name": "com.xamdesign.shoeApp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDDNa4dEvLxvHC7RdgChQKNCZWXn6GGLC4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
