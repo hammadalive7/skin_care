@@ -1,61 +1,80 @@
-import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class Product {
-  int id;
-  // String sku;
+  int? id;
   String brand;
-  String model;
-  List<Color> colors;
+  String name;
   String description;
   double retailPrice;
   String use;
   String category;
-  String tags;
-  // String sole;
-  int? stock;
-  int? discountRate;
+  int? stock = 1;
+  int? discountRate = 0;
   List<String> images;
-  RxBool isFavorite = false.obs;
-  RxBool isAddedToCartDone = false.obs;
+  bool isFavorite;
+  bool isAddedToCartDone;
 
   Product({
-    required this.id,
-    // required this.sku,
+    this.id,
     required this.brand,
-    required this.model,
-    required this.colors,
+    required this.name,
     required this.stock,
     required this.description,
     required this.retailPrice,
     required this.use,
     required this.category,
-    required this.tags,
-    // required this.sole,
     required this.images,
     required this.isFavorite,
     required this.isAddedToCartDone,
     this.discountRate = 0,
-  });
+  })  ;
+  // {
+  //   isFavorite = RxBool(Favorite);
+  //   isAddedToCartDone = RxBool(AddedToCartDone);
+  // }
 
-  factory Product.fromMap(Map<String, dynamic> map){
+  Map<String, dynamic> toMap() {
+    return {
+      'id': id,
+      'brand': brand,
+      'model': name,
+      'stock': stock,
+      'description': description,
+      'retailPrice': retailPrice,
+      'use': use,
+      'category': category,
+      'image': images,
+      'isFavorite': isFavorite ,
+      'isAddedToCartDone': isAddedToCartDone,
+      'discountRate': discountRate ?? 0,
+    };
+  }
+
+  factory Product.fromMap(Map<String, dynamic> map) {
+    // Convert the 'images' list from List<dynamic> to List<String>
+    List<String> images = (map['images'] as List).map((item) => item.toString()).toList();
+
     return Product(
       id: map['id'],
-      // sku: map['sku'],
-      brand: map['brand'],
-      model: map['model'],
-      colors: map['colors'],
+      brand: map['brand'] ?? 'Brand',
+      name: map['model'],
       stock: map['stock'],
       description: map['description'],
       retailPrice: map['retailPrice'],
       use: map['use'],
       category: map['category'],
-      tags: map['tags'],
-      // sole: map['sole'],
-      images: map['images'],
-      isFavorite: map['isFavorite'],
-      isAddedToCartDone: map['isAddedToCartDone'],
+      images: images, // Use the converted List<String>
+      isFavorite: map['isFavorite'], // Convert to a regular bool
+      isAddedToCartDone: map['isAddedToCartDone'], // Convert to a regular bool
       discountRate: map['discountRate'],
     );
   }
+
+  // RxBool get isFavoriteRx => isFavorite;
+  // RxBool get isAddedToCartDoneRx => isAddedToCartDone;
+  //
+  // void dispose() {
+  //   isFavorite.close();
+  //   isAddedToCartDone.close();
+  // }
 }

@@ -1,7 +1,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:skin_care/core/constants/color_constants.dart';
 import 'package:skin_care/core/utils/base/base_controller.dart';

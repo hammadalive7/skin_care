@@ -5,7 +5,6 @@ import 'package:get/get.dart';
 import 'package:skin_care/core/translations/translation_keys.dart';
 import 'package:skin_care/core/widgets/custom_bottom_sheet/custom_bottom_sheet.dart';
 import 'package:skin_care/ui/views/home/components/home_filter_apply_button.dart';
-import 'package:skin_care/ui/views/home/components/home_filter_categories.dart';
 import 'package:skin_care/ui/views/home/components/home_filter_price_range.dart';
 import 'package:skin_care/ui/views/home/components/home_filter_type.dart';
 

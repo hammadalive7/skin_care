@@ -7,7 +7,7 @@ import 'package:skin_care/core/translations/translation_keys.dart';
 import 'package:skin_care/core/utils/base/base_stateless.dart';
 import 'package:skin_care/core/utils/device_utils.dart';
 
-import '../controllers/auth/auth_controller.dart';
+import 'package:skin_care/core/controllers/auth/auth_controller.dart';
 
 class SignInWithGoogleButton extends BaseStatelessWidget {
 

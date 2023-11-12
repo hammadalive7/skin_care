@@ -6,8 +6,10 @@ import 'package:skin_care/core/utils/base/base_controller.dart';
 
 class ProductPrice extends StatefulWidget {
   final int productIndex;
+  final double productPrice;
+  final String? productName;
 
-  const ProductPrice({required this.productIndex, super.key});
+  const ProductPrice({this.productName,required this.productIndex, required this.productPrice, super.key});
 
   @override
   State<ProductPrice> createState() => _ProductPriceState();
@@ -27,7 +29,7 @@ class _ProductPriceState extends State<ProductPrice> {
             children: [
               Flexible(
                 child: Text(
-                  "${productList[widget.productIndex].model}",
+                  "${widget.productName}",
                   style: context.textTheme.titleMedium?.copyWith(
                     fontWeight: FontWeight.w300,
                     overflow: TextOverflow.ellipsis,
@@ -64,13 +66,13 @@ class _ProductPriceState extends State<ProductPrice> {
               if (productList[widget.productIndex].discountRate != null &&
                   productList[widget.productIndex].discountRate != 0)
                 Text(
-                  "\$${(BaseController.homeController.calculateDiscount(productList[widget.productIndex].retailPrice, productList[widget.productIndex].discountRate!)).toStringAsFixed(2)}",
+                  "\$${(BaseController.homeController.calculateDiscount(widget.productPrice, productList[widget.productIndex].discountRate!)).toStringAsFixed(2)}",
                   style: context.textTheme.titleMedium?.copyWith(
                     fontWeight: FontWeight.w600,
                   ),
                 ),
               Text(
-                "\$${productList[widget.productIndex].retailPrice}",
+                "\$${widget.productPrice.toStringAsFixed(2)}",
                 style: context.textTheme.titleMedium?.copyWith(
                   fontWeight:
                       (productList[widget.productIndex].discountRate != null &&

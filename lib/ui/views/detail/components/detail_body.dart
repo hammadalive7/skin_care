@@ -24,7 +24,7 @@ class DetailBody extends StatelessWidget {
           FadeInUp(
               from: 5,
               duration: const Duration(milliseconds: 400),
-              child: DetailInfo(model: product.model, colors: product.colors)),
+              child: DetailInfo(model: product.name,)),
           FadeInUp(
               from: 10,
               duration: const Duration(milliseconds: 600),

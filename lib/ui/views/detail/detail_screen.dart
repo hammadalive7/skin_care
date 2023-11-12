@@ -19,7 +19,7 @@ class DetailScreen extends StatefulWidget {
 class _DetailScreenState extends State<DetailScreen> {
   @override
   void initState() {
-    BaseController.detailController.changeColor(widget.product.colors.first);
+    // BaseController.detailController.changeColor(widget.product.colors.first);
     super.initState();
   }
 
@@ -32,7 +32,7 @@ class _DetailScreenState extends State<DetailScreen> {
         from: 10,
         duration: const Duration(milliseconds: 800),
         child: DetailAddToCartButton(
-          productId: widget.product.id,
+          productId: widget.product.id!,
           retailPrice: widget.product.discountRate != null
               ? BaseController.homeController
                   .calculateDiscount(

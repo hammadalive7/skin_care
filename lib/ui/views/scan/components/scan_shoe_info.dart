@@ -40,7 +40,7 @@ class ScanProductInfo extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    productList.first.model,
+                    productList.first.name,
                     style: context.textTheme.labelLarge,
                   ),
                   const SizedBox(height: 4.0),

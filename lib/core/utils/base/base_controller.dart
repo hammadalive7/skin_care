@@ -8,6 +8,7 @@ import 'package:skin_care/core/controllers/detail/detail_controller.dart';
 import 'package:skin_care/core/controllers/home/home_controller.dart';
 import 'package:skin_care/core/controllers/message/message_controller.dart';
 import 'package:skin_care/core/controllers/navigation/navigation_controller.dart';
+import 'package:skin_care/core/controllers/product/product_controller.dart';
 import 'package:skin_care/core/controllers/review/review_controller.dart';
 import 'package:skin_care/core/controllers/search/search_product_controller.dart';
 import 'package:skin_care/core/controllers/settings/settings_controller.dart';
@@ -17,6 +18,8 @@ import 'package:skin_care/core/controllers/track_location/track_location_control
 class BaseController {
   static final HomeController homeController = Get.find<HomeController>();
   static final AuthController authController = Get.find<AuthController>();
+  static final ProductController productController =
+      Get.find<ProductController>();
   static final NavigationController navigationController =
       Get.find<NavigationController>();
   static final ThemeController themeController = Get.find<ThemeController>();

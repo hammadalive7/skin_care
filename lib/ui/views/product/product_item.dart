@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:skin_care/core/constants/color_constants.dart';
 import 'package:skin_care/core/data/product_list.dart';
+import 'package:skin_care/core/models/product_model.dart';
 import 'package:skin_care/core/utils/base/base_controller.dart';
 import 'package:skin_care/core/utils/device_utils.dart';
 import 'package:skin_care/ui/views/detail/detail_screen.dart';
@@ -15,10 +16,12 @@ import 'package:skin_care/ui/views/product/product_stock_left.dart';
 class ProductItemView extends StatelessWidget {
   final int index;
   final bool showColor;
+  Product product;
 
-  const ProductItemView({
+  ProductItemView({
     required this.index,
     this.showColor = false,
+    required this.product,
     super.key,
   });
 
@@ -49,7 +52,7 @@ class ProductItemView extends StatelessWidget {
                 ),
                 child: Stack(
                   children: [
-                    ProductItemImage(index: index),
+                    ProductItemImage(index: index, productImage: product.images),
                     ProductItemFavButton(index: index),
                     ProductItemCartButton(
                       productModel: productList[index],
@@ -60,24 +63,26 @@ class ProductItemView extends StatelessWidget {
               );
             },
           ),
-          ProductPrice(productIndex: index),
-          if (showColor)
-            Row(
-              children: productList[index]
-                  .colors
-                  .map(
-                    (color) => Container(
-                      width: 16,
-                      height: 16,
-                      margin: const EdgeInsets.symmetric(horizontal: 4.0),
-                      decoration: BoxDecoration(
-                        color: color,
-                        shape: BoxShape.circle,
-                      ),
-                    ),
-                  )
-                  .toList(),
-            ),
+          ProductPrice(productIndex: index, productPrice: 10,),
+          // if (showColor)
+            // Row(
+            //   children: productList[index]
+            //       .colors
+            //       .map(
+            //         (color) => Container(
+            //           width: 16,
+            //           height: 16,
+            //           margin: const EdgeInsets.symmetric(horizontal: 4.0),
+            //           decoration: BoxDecoration(
+            //             color: color,
+            //             shape: BoxShape.circle,
+            //           ),
+            //         ),
+            //       )
+            //       .toList(),
+            // ),
+
+
         ],
       ),
     );

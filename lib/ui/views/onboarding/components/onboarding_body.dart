@@ -2,7 +2,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'package:skin_care/core/translations/translation_keys.dart';
 import 'package:skin_care/core/utils/device_utils.dart';
 import 'package:skin_care/ui/views/onboarding/components/onboarding_description_text.dart';
 import 'package:skin_care/ui/views/onboarding/components/onboarding_image.dart';

@@ -1,10 +1,12 @@
+import 'dart:ffi';
 import 'dart:io';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:firebase_storage/firebase_storage.dart' as firebase_storage;
 
-import '../../../core/controllers/product/product_controller.dart';
-import '../../../core/models/products_model.dart';
+import 'package:skin_care/core/controllers/product/product_controller.dart';
+import 'package:skin_care/core/models/product_model.dart';
 
 
 class AdminDashBoard extends StatefulWidget {
@@ -21,13 +23,15 @@ class _AdminDashBoardState extends State<AdminDashBoard> {
   late TextEditingController _descriptionController;
   late TextEditingController _categoryController;
   late TextEditingController _useController;
-  late TextEditingController _tagsController;
-
+  late TextEditingController _stockController;
+  late TextEditingController _brandController;
   ProductController productController = ProductController();
+  bool addToCart = false;
+  bool isFavorite = false;
 
   final _picker = ImagePicker();
   XFile? _pickedImage;
-  String? _imageURL;
+  List<String> _imageURL = [];
 
   void _selectImage() async {
     final pickedImage = await _picker.pickImage(source: ImageSource.gallery);
@@ -44,13 +48,16 @@ class _AdminDashBoardState extends State<AdminDashBoard> {
       // Upload image to Firebase Storage
       final storageReference = firebase_storage.FirebaseStorage.instance
           .ref()
-          .child('product_images/${DateTime.now().toString()}.jpg');
+          .child('product_images/${DateTime.now()}.jpg');
 
       final uploadTask = storageReference.putFile(imageFile);
       await uploadTask.whenComplete(() async {
-        _imageURL = await storageReference.getDownloadURL();
+        _imageURL.add(await storageReference.getDownloadURL());
+        debugPrint('imageURL: $_imageURL');
       });
     }
+
+
   }
 
 
@@ -62,7 +69,8 @@ class _AdminDashBoardState extends State<AdminDashBoard> {
     _descriptionController = TextEditingController();
     _categoryController = TextEditingController();
     _useController = TextEditingController();
-    _tagsController = TextEditingController();
+    _stockController = TextEditingController();
+    _brandController = TextEditingController();
   }
 
   @override
@@ -72,21 +80,26 @@ class _AdminDashBoardState extends State<AdminDashBoard> {
     _descriptionController.dispose();
     _categoryController.dispose();
     _useController.dispose();
-    _tagsController.dispose();
+    _stockController.dispose();
+    _brandController.dispose();
     super.dispose();
   }
 
   Future<void> _submitForm() async {
     if (_formKey.currentState!.validate()) {
-      final product = AdminProduct(
-        pName: _nameController.text,
-        pImage: _imageURL!,
-        pPrice: double.parse(_priceController.text),
-        pDescription: _descriptionController.text,
-        pCategory: _categoryController.text,
-        pUse: _useController.text,
-        pTag: _tagsController.text,
-      );
+      final product = Product.fromMap({
+        'id': DateTime.now().second,
+        'brand': _brandController.text,
+        'model': _nameController.text,
+        'stock': int.parse(_stockController.text),
+        'description': _descriptionController.text,
+        'retailPrice': double.parse(_priceController.text),
+        'use': _useController.text,
+        'category': _categoryController.text,
+        'images': _imageURL,
+        'isFavorite': isFavorite,
+        'isAddedToCartDone': addToCart,
+      });
 
       // Call a function to store the product in Firestore
       productController.storeProduct(product);
@@ -96,16 +109,16 @@ class _AdminDashBoardState extends State<AdminDashBoard> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Add Product')),
+      appBar: AppBar(title: const Text('Add Product')),
       body: Padding(
-        padding: EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(16.0),
         child: Form(
           key: _formKey,
           child: ListView(
             children: [
               TextFormField(
                 controller: _nameController,
-                decoration: InputDecoration(labelText: 'Name'),
+                decoration: const InputDecoration(labelText: 'Name'),
                 validator: (value) {
                   if (value == null || value.isEmpty) {
                     return 'Please enter a name';
@@ -116,13 +129,13 @@ class _AdminDashBoardState extends State<AdminDashBoard> {
               // Similar TextFormField widgets for other fields
               ElevatedButton(
                 onPressed: _selectImage,  // Call the image picker function
-                child: Text('Pick Image'),
+                child: const Text('Pick Image'),
               ),
                 // Display the selected image
 
               TextFormField(
                 controller: _priceController,
-                decoration: InputDecoration(labelText: 'Price'),
+                decoration: const InputDecoration(labelText: 'Price'),
                 validator: (value) {
                   if (value == null || value.isEmpty) {
                     return 'Please enter a price';
@@ -137,7 +150,7 @@ class _AdminDashBoardState extends State<AdminDashBoard> {
               ),
               TextFormField(
                 controller: _descriptionController,
-                decoration: InputDecoration(labelText: 'Description'),
+                decoration: const InputDecoration(labelText: 'Description'),
                 validator: (value) {
                   if (value == null || value.isEmpty) {
                     return 'Please enter a description';
@@ -147,7 +160,7 @@ class _AdminDashBoardState extends State<AdminDashBoard> {
               ),
               TextFormField(
                 controller: _categoryController,
-                decoration: InputDecoration(labelText: 'Category'),
+                decoration: const InputDecoration(labelText: 'Category'),
                 validator: (value) {
                   if (value == null || value.isEmpty) {
                     return 'Please enter a category';
@@ -157,7 +170,7 @@ class _AdminDashBoardState extends State<AdminDashBoard> {
               ),
               TextFormField(
                 controller: _useController,
-                decoration: InputDecoration(labelText: 'Use'),
+                decoration: const InputDecoration(labelText: 'Use'),
                 validator: (value) {
                   if (value == null || value.isEmpty) {
                     return 'Please enter a use';
@@ -166,21 +179,24 @@ class _AdminDashBoardState extends State<AdminDashBoard> {
                 },
               ),
               TextFormField(
-                controller: _tagsController,
-                decoration: InputDecoration(labelText: 'Tags'),
+                controller: _stockController,
+                decoration: const InputDecoration(labelText: 'Stock'),
+
                 validator: (value) {
+
+                  //check for integer number
                   if (value == null || value.isEmpty) {
                     return 'Please enter a tag';
                   }
                   return null;
                 },
               ),
-              SizedBox(height: 16.0),
+              const SizedBox(height: 16.0),
 
 
               ElevatedButton(
                 onPressed: _submitForm,
-                child: Text('Submit'),
+                child: const Text('Submit'),
               ),
             ],
           ),

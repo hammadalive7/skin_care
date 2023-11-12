@@ -43,17 +43,14 @@ class DetailProductImage extends StatelessWidget {
                 );
               }).toList(),
             )
-          : Hero(
-              tag: product.id,
-              child: Padding(
-                padding: const EdgeInsets.all(24.0),
-                child: Image.asset(
-                  product.images.first,
-                  width: DeviceUtils.getWidth(context),
-                  height: DeviceUtils.getDynamicHeight(context, 0.3),
-                ),
-              ),
+          : Padding(
+            padding: const EdgeInsets.all(24.0),
+            child: Image.asset(
+              product.images.first,
+              width: DeviceUtils.getWidth(context),
+              height: DeviceUtils.getDynamicHeight(context, 0.3),
             ),
+          ),
     );
   }
 }

@@ -1,8 +1,8 @@
 
 import 'package:flutter/material.dart';
 
-import 'color_constants.dart';
-import 'string_constants.dart';
+import 'package:skin_care/core/constants/color_constants.dart';
+import 'package:skin_care/core/constants/string_constants.dart';
 
 
 final lightTheme = ThemeData(

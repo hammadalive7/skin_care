@@ -24,13 +24,13 @@ class _ProductItemCartButtonState extends State<ProductItemCartButton> {
       child: InkResponse(
         onTap: () async {
           final result =
-              BaseController.cartController.addItemToCart(widget.productModel.id);
+              BaseController.cartController.addItemToCart(widget.productModel.id!);
           if (result) {
             HapticFeedback.lightImpact();
-            widget.productModel.isAddedToCartDone.value = true;
+            widget.productModel.isAddedToCartDone = true;
           }
           await Future.delayed(const Duration(milliseconds: 500), () {
-            widget.productModel.isAddedToCartDone.value = false;
+            widget.productModel.isAddedToCartDone = false;
           });
         },
         radius: 10,
@@ -41,7 +41,7 @@ class _ProductItemCartButtonState extends State<ProductItemCartButton> {
           child: Obx(() {
             return Center(
               child: SvgPicture.asset(
-                widget.productModel.isAddedToCartDone.value
+                widget.productModel.isAddedToCartDone
                     ? "assets/images/check.svg"
                     : "assets/images/cart.svg",
                 height: 20,

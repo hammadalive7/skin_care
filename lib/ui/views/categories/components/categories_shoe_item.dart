@@ -43,7 +43,7 @@ class CategoriesProductItem extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  ProductPrice(productIndex: index),
+                  ProductPrice(productIndex: index, productPrice: 10,),
                   const SizedBox(height: 4.0),
                   CustomMaterialButton(
                     backgroundColor: kLightBlueColor,

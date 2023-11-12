@@ -24,10 +24,10 @@ class LoginBody extends StatelessWidget {
         child:  Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            LoginWelcome(),
+            const LoginWelcome(),
             SignInWithGoogleButton(),
-            LoginForm(),
-            Center(child: LoginSignInButton()),
+            const LoginForm(),
+            const Center(child: LoginSignInButton()),
           ],
         ),
       ),

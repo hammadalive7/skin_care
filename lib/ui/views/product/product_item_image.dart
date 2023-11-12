@@ -7,8 +7,9 @@ import 'package:skin_care/core/utils/device_utils.dart';
 
 class ProductItemImage extends StatefulWidget {
   final int index;
+  List<String>? productImage = [];
 
-  const ProductItemImage({required this.index, super.key});
+  ProductItemImage({required this.index, super.key, this.productImage});
 
   @override
   State<ProductItemImage> createState() => _ProductItemImageState();
@@ -17,6 +18,8 @@ class ProductItemImage extends StatefulWidget {
 class _ProductItemImageState extends State<ProductItemImage> {
   @override
   Widget build(BuildContext context) {
+    print("productList[widget.index].images: " +
+        widget.productImage!.toString());
     return productList[widget.index].images.length > 1
         ? Column(
             children: [
@@ -63,11 +66,21 @@ class _ProductItemImageState extends State<ProductItemImage> {
               )
             ],
           )
-        : Hero(
-            tag: productList[widget.index].id,
+        : widget.productImage == null ? Hero(
+            tag: productList[widget.index].id!,
             child: Center(
               child: Image.asset(
                 productList[widget.index].images.first,
+                height: DeviceUtils.getDynamicHeight(context, 0.12),
+                width: DeviceUtils.getDynamicWidth(context, 0.28),
+                fit: BoxFit.contain,
+              ),
+            ),
+          ) :  Hero(
+            tag: productList[widget.index].id!,
+            child: Center(
+              child: Image.network(
+                widget.productImage![0].toString(),
                 height: DeviceUtils.getDynamicHeight(context, 0.12),
                 width: DeviceUtils.getDynamicWidth(context, 0.28),
                 fit: BoxFit.contain,

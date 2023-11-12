@@ -32,7 +32,7 @@ class CartOrderItem extends StatelessWidget {
             flex: 3,
             child: CartOrderItemInfo(
               index: index,
-              model: cartItem.product.model,
+              model: cartItem.product.name,
               retailPrice: cartItem.product.retailPrice,
             ),
           ),

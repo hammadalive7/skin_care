@@ -3,26 +3,31 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../models/product_model.dart';
-import '../../models/products_model.dart';
 
 class ProductController extends GetxController {
 
-  Future<void> storeProduct(AdminProduct product) async {
+  Future<void> storeProduct(Product product) async {
     try {
       final CollectionReference productCollection =
           FirebaseFirestore.instance.collection('products');
-      await productCollection.add({
-        'name': product.pName,
-        'image': product.pImage,
-        'price': product.pPrice,
-        'description': product.pDescription,
-        'category': product.pCategory,
-        'use': product.pUse,
-        'tags': product.pTag,
-      }).whenComplete(() => Get.snackbar(
+      await productCollection.add(
+        {
+          'model': product.name,
+          'retailPrice': product.retailPrice,
+          'description': product.description,
+          'category': product.category,
+          'use': product.use,
+          'stock': product.stock,
+          'brand': product.brand,
+          'images': product.images,
+          'isAddedToCartDone': product.isAddedToCartDone,
+          'isFavorite': product.isFavorite,
+        },
+      ).whenComplete(() => Get.snackbar(
           'Success', 'Product added successfully',
           backgroundColor: Colors.green, colorText: Colors.white));
     } catch (e) {
+      debugPrint(' ---- error: $e');
       Get.snackbar('Error', e.toString(),
           backgroundColor: Colors.red, colorText: Colors.white);
     }
@@ -34,15 +39,28 @@ class ProductController extends GetxController {
     final collection = FirebaseFirestore.instance.collection('products');
 
     // Get all of the documents in the collection.
-    final snapshots = await collection.get();
+    final snapshots = await collection.get().catchError((error) {
+      debugPrint('error: $error');
+    });
 
     // Iterate over the documents and convert each document to a product model object.
-    final productModels = snapshots.docs.map((snapshot) {
+    List<Product> productModels = snapshots.docs.map((snapshot) {
+      debugPrint('-- snapshot data: ${snapshot.data()}');
       return Product.fromMap(snapshot.data());
     }).toList();
 
-    // Return the list of product model objects.
+    debugPrint('-- productModels: $productModels');
     return productModels;
+  }
+
+  Stream<Object?> productStream() async* {
+    // Fetch the product data.
+    final productModels = await fetchProductData();
+
+    // Yield each product model object to the stream.
+    for (final productModel in productModels) {
+      yield productModel;
+    }
   }
 
 }

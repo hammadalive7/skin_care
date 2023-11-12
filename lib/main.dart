@@ -21,7 +21,7 @@ import 'package:skin_care/ui/views/splash/splash_screen.dart';
 import 'package:skin_care/core/controllers/search/search_product_controller.dart';
 import 'package:skin_care/firebase_options.dart';
 
-import 'core/controllers/product/product_controller.dart';
+import 'package:skin_care/core/controllers/product/product_controller.dart';
 
 void main() async {
 

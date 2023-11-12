@@ -3,12 +3,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../data/product_list.dart';
-import '../../models/cart_item_model.dart';
-import '../../translations/translation_keys.dart';
-import '../../utils/base/base_controller.dart';
-import '../../widgets/custom_loading_button.dart';
-import '../../widgets/custom_warning_alert/custom_warning_alert.dart';
+import 'package:skin_care/core/data/product_list.dart';
+import 'package:skin_care/core/models/cart_item_model.dart';
+import 'package:skin_care/core/translations/translation_keys.dart';
+import 'package:skin_care/core/utils/base/base_controller.dart';
+import 'package:skin_care/core/widgets/custom_loading_button.dart';
+import 'package:skin_care/core/widgets/custom_warning_alert/custom_warning_alert.dart';
 
 
 class CartController extends GetxController {

@@ -2,10 +2,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../../../core/translations/translation_keys.dart';
-import '../../../../core/utils/base/base_controller.dart';
-import '../../../../core/utils/device_utils.dart';
-import 'cart_order_item.dart';
+import 'package:skin_care/core/translations/translation_keys.dart';
+import 'package:skin_care/core/utils/base/base_controller.dart';
+import 'package:skin_care/core/utils/device_utils.dart';
+import 'package:skin_care/ui/views/cart/components/cart_order_item.dart';
 
 
 class CartOrderList extends StatelessWidget {

@@ -9,7 +9,6 @@ import 'package:skin_care/core/widgets/custom_drawer/custom_drawer.dart';
 import 'package:skin_care/ui/views/cart/cart_screen.dart';
 import 'package:skin_care/ui/views/discover/discover_screen.dart';
 import 'package:skin_care/ui/views/home/home_screen.dart';
-import 'package:skin_care/ui/views/message/message_screen.dart';
 import 'package:skin_care/ui/views/profile/profile_screen.dart';
 import 'package:skin_care/ui/views/navigation/components/navigation_bottom_bar.dart';
 

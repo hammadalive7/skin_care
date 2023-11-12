@@ -7,11 +7,11 @@ import 'package:skin_care/ui/views/detail/components/detail_title.dart';
 
 class DetailInfo extends StatelessWidget {
   final String model;
-  final List<Color> colors;
+  // final List<Color> colors;
 
   const DetailInfo({
     required this.model,
-    required this.colors,
+    // required this.colors,
     super.key,
   });
 
@@ -27,7 +27,7 @@ class DetailInfo extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Expanded(flex: 3, child: DetailTitle(model: model)),
-          Expanded(flex: 2, child: DetailColorList(colors: colors)),
+          // Expanded(flex: 2, child: DetailColorList(colors: colors)),
         ],
       ),
     );

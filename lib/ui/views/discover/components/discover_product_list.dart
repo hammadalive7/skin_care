@@ -27,7 +27,7 @@ class DiscoverProductList extends StatelessWidget {
         itemCount: productList.length,
         itemBuilder: (context, index) => ProductItemView(
           index: index,
-          showColor: true,
+          showColor: true, product: productList[index],
         ),
       ),
     );

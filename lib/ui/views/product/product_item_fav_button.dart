@@ -23,8 +23,8 @@ class _ProductItemFavButtonState extends State<ProductItemFavButton> {
       child: InkResponse(
         onTap: () {
           HapticFeedback.selectionClick();
-          productList[widget.index].isFavorite.value =
-              (!productList[widget.index].isFavorite.value);
+          productList[widget.index].isFavorite =
+              (!productList[widget.index].isFavorite);
         },
         radius: 10,
         containedInkWell: true,
@@ -34,7 +34,7 @@ class _ProductItemFavButtonState extends State<ProductItemFavButton> {
               height: 25,
               width: 25,
               child: Icon(
-                productList[widget.index].isFavorite.value
+                productList[widget.index].isFavorite
                     ? Icons.favorite
                     : Icons.favorite_border,
                 size: 20,

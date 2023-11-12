@@ -49,10 +49,10 @@ class _DetailPropertiesState extends State<DetailProperties> {
               title: "${TranslationKeys.outerMaterial.tr}:",
               description: widget.product.category,
             ),
-            DetailPropertyText(
-              title: "${TranslationKeys.lining.tr}:",
-              description: widget.product.tags,
-            ),
+            // DetailPropertyText(
+            //   title: "${TranslationKeys.lining.tr}:",
+            //   description: widget.product.tags,
+            // ),
             DetailPropertyText(
               title: "${TranslationKeys.sole.tr}:",
               description: widget.product.category,

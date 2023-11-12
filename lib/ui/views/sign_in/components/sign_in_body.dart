@@ -23,9 +23,9 @@ class SignInBody extends StatelessWidget {
         child:  Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SignInWelcome(),
+            const SignInWelcome(),
             SignInWithGoogleButton(),
-            SignInForm(),
+            const SignInForm(),
           ],
         ),
       ),

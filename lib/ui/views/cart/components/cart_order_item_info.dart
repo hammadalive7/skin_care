@@ -23,7 +23,7 @@ class CartOrderItemInfo extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          ProductPrice(productIndex: productList.indexWhere((e) => e.model == model)),
+          ProductPrice(productIndex: productList.indexWhere((e) => e.name == model), productPrice: 10,),
           const SizedBox(height: 16.0),
           CartOrderItemPiece(index: index),
         ],

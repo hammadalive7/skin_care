@@ -4,7 +4,6 @@ import 'package:skin_care/core/enums/order_status_enum.dart';
 import 'package:skin_care/core/models/order_location_model.dart';
 import 'package:skin_care/core/models/order_supplier_model.dart';
 import 'package:skin_care/core/models/product_model.dart';
-import 'package:skin_care/core/models/product_model.dart';
 
 class Order {
   int id;
