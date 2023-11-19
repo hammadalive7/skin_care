@@ -32,7 +32,7 @@ class _DetailScreenState extends State<DetailScreen> {
         from: 10,
         duration: const Duration(milliseconds: 800),
         child: DetailAddToCartButton(
-          productId: widget.product.id!,
+          productId: 1,
           retailPrice: widget.product.discountRate != null
               ? BaseController.homeController
                   .calculateDiscount(

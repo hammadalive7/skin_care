@@ -28,17 +28,25 @@ class ProductItemView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => Get.to(() => DetailScreen(product: productList[index])),
+      onTap: () => Get.to(() => DetailScreen(product: product)),
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Obx(
             () {
               return Container(
-                width: DeviceUtils.getWidth(context),
+                width: DeviceUtils.getDynamicWidth(context, 0.4),
                 height: DeviceUtils.getDynamicHeight(context, 0.2),
                 padding: const EdgeInsets.all(12.0),
                 decoration: BoxDecoration(
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey.withOpacity(0.5),
+                      spreadRadius: 1,
+                      blurRadius: 7,
+                      offset: const Offset(0, 3),
+                    ),
+                  ],
                   border: Border.all(
                     color: BaseController.themeController.isDark.value
                         ? kDarkStrokeColor
@@ -63,7 +71,7 @@ class ProductItemView extends StatelessWidget {
               );
             },
           ),
-          ProductPrice(productIndex: index, productPrice: 10,),
+          ProductPrice(productIndex: index, productPrice: product.retailPrice, productName: product.name),
           // if (showColor)
             // Row(
             //   children: productList[index]

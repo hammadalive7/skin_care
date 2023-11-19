@@ -23,6 +23,7 @@ class _AdminDashBoardState extends State<AdminDashBoard> {
   late TextEditingController _descriptionController;
   late TextEditingController _categoryController;
   late TextEditingController _useController;
+  late TextEditingController _ingredientsController;
   late TextEditingController _stockController;
   late TextEditingController _brandController;
   ProductController productController = ProductController();
@@ -56,8 +57,6 @@ class _AdminDashBoardState extends State<AdminDashBoard> {
         debugPrint('imageURL: $_imageURL');
       });
     }
-
-
   }
 
 
@@ -69,6 +68,7 @@ class _AdminDashBoardState extends State<AdminDashBoard> {
     _descriptionController = TextEditingController();
     _categoryController = TextEditingController();
     _useController = TextEditingController();
+    _ingredientsController = TextEditingController();
     _stockController = TextEditingController();
     _brandController = TextEditingController();
   }
@@ -81,6 +81,7 @@ class _AdminDashBoardState extends State<AdminDashBoard> {
     _categoryController.dispose();
     _useController.dispose();
     _stockController.dispose();
+    _ingredientsController.dispose();
     _brandController.dispose();
     super.dispose();
   }
@@ -97,6 +98,7 @@ class _AdminDashBoardState extends State<AdminDashBoard> {
         'use': _useController.text,
         'category': _categoryController.text,
         'images': _imageURL,
+        'ingredients': _ingredientsController.text.split(','),
         'isFavorite': isFavorite,
         'isAddedToCartDone': addToCart,
       });
@@ -159,6 +161,16 @@ class _AdminDashBoardState extends State<AdminDashBoard> {
                 },
               ),
               TextFormField(
+                controller: _ingredientsController,
+                decoration: const InputDecoration(labelText: 'Ingredients'),
+                validator: (value) {
+                  if (value == null || value.isEmpty) {
+                    return 'Please enter a category';
+                  }
+                  return null;
+                },
+              ),
+              TextFormField(
                 controller: _categoryController,
                 decoration: const InputDecoration(labelText: 'Category'),
                 validator: (value) {
@@ -192,8 +204,6 @@ class _AdminDashBoardState extends State<AdminDashBoard> {
                 },
               ),
               const SizedBox(height: 16.0),
-
-
               ElevatedButton(
                 onPressed: _submitForm,
                 child: const Text('Submit'),

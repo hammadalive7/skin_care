@@ -10,6 +10,7 @@ List<Product> productList = [
     // sku: "DEF456",
     brand: "POND",
     name: "Face Wash",
+    ingredients: ["Aqua", "Sodium Laureth Sulfate", "Glycerin"],
     // colors: [Colors.pink, Colors.grey, Colors.lightGreen],
     description: "Women's",
     retailPrice: 179.99,
@@ -26,6 +27,7 @@ List<Product> productList = [
     // sku: "ABC123",
     brand: "POND",
     name: "Face Wash",
+    ingredients: ["Aqua", "Sodium Laureth Sulfate", "Glycerin"],
     // colors: [Colors.teal, Colors.lightGreen, Colors.red],
     description: "Unisex",
     retailPrice: 149.99,
@@ -45,6 +47,8 @@ List<Product> productList = [
   Product(
     id: 3,
     stock: 32,
+    ingredients: ["Aqua", "Sodium Laureth Sulfate", "Glycerin"],
+
     // sku: "GHI789",
     brand: "POND",
     name: "Face Wash",
@@ -72,6 +76,8 @@ List<Product> productList = [
     // colors: [Colors.lightGreen, Colors.blue, Colors.red],
     description: "Unisex",
     retailPrice: 89.99,
+    ingredients: ["Aqua", "Sodium Laureth Sulfate", "Glycerin"],
+
     use: "2023",
     category: "Leather",
     // tags: "Textile",
@@ -92,6 +98,8 @@ List<Product> productList = [
     retailPrice: 109.99,
     use: "2023",
     category: "Suede, Mesh",
+    ingredients: ["Aqua", "Sodium Laureth Sulfate", "Glycerin"],
+
     // tags: "Textile",
     // sole: "Rubber",
     images: ["assets/images/product.jpg"],
@@ -107,6 +115,8 @@ List<Product> productList = [
     // colors: [Colors.teal, Colors.green, Colors.lightGreen],
     description: "Men's",
     retailPrice: 129.99,
+    ingredients: ["Aqua", "Sodium Laureth Sulfate", "Glycerin"],
+
     use: "2023",
     category: "Textile, Synthetic",
     // tags: "Textile",
@@ -124,6 +134,8 @@ List<Product> productList = [
     // colors: [Colors.blue, Colors.grey, Colors.lightGreen],
     description: "Unisex",
     retailPrice: 159.99,
+    ingredients: ["Aqua", "Sodium Laureth Sulfate", "Glycerin"],
+
     use: "2023",
     category: "Mesh, Synthetic",
     // tags: "Textile",
@@ -141,6 +153,8 @@ List<Product> productList = [
     // colors: [Colors.teal, Colors.lightGreen, Colors.grey],
     description: "Unisex",
     retailPrice: 79.99,
+    ingredients: ["Aqua", "Sodium Laureth Sulfate", "Glycerin"],
+
     use: "2023",
     category: "Canvas, Suede",
     // tags: "Textile",
@@ -157,6 +171,8 @@ List<Product> productList = [
     name: "Face Wash",
     // colors: [Colors.lightGreen, Colors.teal, Colors.red],
     description: "Unisex",
+    ingredients: ["Aqua", "Sodium Laureth Sulfate", "Glycerin"],
+
     retailPrice: 59.99,
     use: "2023",
     category: "Canvas",
@@ -171,11 +187,14 @@ List<Product> productList = [
     stock: 12,
     // sku: "BCD890",
     brand: "NIVA",
+    ingredients: ["Aqua", "Sodium Laureth Sulfate", "Glycerin"],
+
     name: "Face Wash",
     // colors: [Colors.teal, Colors.orange, Colors.grey],
     description: "Unisex",
     retailPrice: 129.99,
     use: "2023",
+
     category: "Mesh, Synthetic",
     // tags: "Textile",
     // sole: "Contagrip Rubber",

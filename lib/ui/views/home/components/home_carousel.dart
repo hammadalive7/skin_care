@@ -9,12 +9,12 @@ class HomeCarousel extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.symmetric(
-        horizontal: DeviceUtils.getDynamicWidth(context, 0.07),
+        horizontal: DeviceUtils.getDynamicWidth(context, 0.05),
         vertical: DeviceUtils.getDynamicWidth(context, 0.04),
       ),
       child: CarouselSlider(
         options: CarouselOptions(
-          aspectRatio: 16 / 9,
+          aspectRatio: 18 / 10,
           viewportFraction: 1,
           initialPage: 0,
           enlargeCenterPage: false,
@@ -28,6 +28,7 @@ class HomeCarousel extends StatelessWidget {
           "assets/images/banner2.png",
           "assets/images/banner3.png",
         ].map((e) => ClipRRect(
+
                   borderRadius: BorderRadius.circular(24.0),
                   child: Image.asset(
                     e,

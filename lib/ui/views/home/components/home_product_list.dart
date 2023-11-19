@@ -8,7 +8,6 @@ import 'package:skin_care/core/utils/device_utils.dart';
 import 'package:skin_care/ui/views/home/components/home_carousel.dart';
 import 'package:skin_care/ui/views/product/product_item.dart';
 import 'package:skin_care/core/constants/color_constants.dart';
-import 'package:skin_care/core/models/products_model.dart';
 import 'package:skin_care/ui/views/detail/detail_screen.dart';
 import 'package:skin_care/ui/views/product/product_item_cart.dart';
 import 'package:skin_care/ui/views/product/product_item_fav_button.dart';
@@ -57,7 +56,7 @@ class _HomeProductListState extends BaseState<HomeProductList> {
                   Text(
                     "See All",
                     style: context.textTheme.titleSmall?.copyWith(
-                      fontWeight: FontWeight.w300,
+                      fontWeight: FontWeight.w400,
                     ),
                   ),
                 ],
@@ -72,7 +71,7 @@ class _HomeProductListState extends BaseState<HomeProductList> {
               child: FutureBuilder(
                 future: BaseController.productController.fetchProductData(),
                   builder: (context, AsyncSnapshot<List<Product>> snapshot) {
-                  debugPrint("-- snapshot data: " + snapshot.data.toString());
+                  // debugPrint("-- snapshot data: " + snapshot.data.toString());
                   if (snapshot.connectionState == ConnectionState.waiting) {
                     return const Center(
                       child: CircularProgressIndicator(),
@@ -89,15 +88,15 @@ class _HomeProductListState extends BaseState<HomeProductList> {
                     );
                   }
                   if(snapshot.hasData){
-                    print("---------- snapshot data");
+                    // print("---------- snapshot data");
                     return ListView.builder(
                       scrollDirection: Axis.horizontal,
                       itemCount:  snapshot.data!.length, // Number of cards
                       itemBuilder: (context, index) {
-                        debugPrint("image" + snapshot.data![index].images.toString());
+                        // debugPrint("image" + snapshot.data![index].images.toString());
                         return GestureDetector(
                           onTap: () =>
-                              Get.to(() => DetailScreen(product: productList[index])),
+                              Get.to(() => DetailScreen(product: snapshot.data![index])),
                           child: Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: Column(
@@ -107,11 +106,19 @@ class _HomeProductListState extends BaseState<HomeProductList> {
                                       () {
                                     return Container(
                                       width:
-                                      DeviceUtils.getDynamicWidth(context, 0.45),
+                                      DeviceUtils.getDynamicWidth(context, 0.40),
                                       height:
                                       DeviceUtils.getDynamicHeight(context, 0.27),
                                       padding: const EdgeInsets.all(12.0),
                                       decoration: BoxDecoration(
+                                        boxShadow: [
+                                          BoxShadow(
+                                            color: Colors.grey.withOpacity(0.5),
+                                            spreadRadius: 1,
+                                            blurRadius: 7,
+                                            offset: const Offset(0, 3),
+                                          ),
+                                        ],
                                         border: Border.all(
                                           color: BaseController
                                               .themeController.isDark.value
@@ -184,9 +191,9 @@ class _HomeProductListState extends BaseState<HomeProductList> {
                   ),
                 ),
                 Text(
-                  "see all",
+                  "See All",
                   style: context.textTheme.titleSmall?.copyWith(
-                    fontWeight: FontWeight.w300,
+                    fontWeight: FontWeight.w400,
                   ),
                 ),
               ],
@@ -202,6 +209,21 @@ class _HomeProductListState extends BaseState<HomeProductList> {
             child: FutureBuilder(
               future: BaseController.productController.fetchProductData(),
               builder: (context, AsyncSnapshot<List<Product>> snapshot) {
+                if (snapshot.connectionState == ConnectionState.waiting) {
+                  return const Center(
+                    child: CircularProgressIndicator(),
+                  );
+                }
+                if (snapshot.hasError) {
+                  return Center(
+                    child: Text(snapshot.error.toString()),
+                  );
+                }
+                if(!snapshot.hasData){
+                  return const Center(
+                    child: Text('No data found'),
+                  );
+                }
                 return GridView.builder(
                   shrinkWrap: true,
                   physics: const NeverScrollableScrollPhysics(),

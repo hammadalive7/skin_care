@@ -1,11 +1,8 @@
 
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:skin_care/core/utils/base/base_controller.dart';
 import 'package:skin_care/core/utils/base/base_statefull.dart';
 import 'package:skin_care/core/utils/device_utils.dart';
-import 'package:skin_care/ui/views/home/components/home_category_list.dart';
 import 'package:skin_care/ui/views/home/components/home_filter_button.dart';
 import 'package:skin_care/ui/views/home/components/home_product_list.dart';
 import 'package:skin_care/ui/views/home/components/home_title.dart';
@@ -26,18 +23,16 @@ class _HomeBodyState extends BaseState<HomeBody> {
       height: DeviceUtils.getHeight(context),
       child: Stack(
         children: [
-          Obx(() {
-            return Column(
+            Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 SlideInLeft(from: 10, child: const HomeTitle()),
-                if (BaseController.homeController.isShowCategoryList.value)
-                  FadeInDown(from: 10, child: const HomeCategoryList()),
+                // if (BaseController.homeController.isShowCategoryList.value)
+                //   FadeInDown(from: 10, child: const HomeCategoryList()),
                 Expanded(
                     child: FadeInUp(from: 10, child: const HomeProductList())),
               ],
-            );
-          }),
+            ),
           Positioned(
             right: 0,
             top: 10,

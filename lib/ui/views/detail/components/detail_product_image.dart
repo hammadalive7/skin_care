@@ -45,8 +45,8 @@ class DetailProductImage extends StatelessWidget {
             )
           : Padding(
             padding: const EdgeInsets.all(24.0),
-            child: Image.asset(
-              product.images.first,
+            child: Image.network(
+              product.images[0].toString(),
               width: DeviceUtils.getWidth(context),
               height: DeviceUtils.getDynamicHeight(context, 0.3),
             ),

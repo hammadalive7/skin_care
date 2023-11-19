@@ -17,12 +17,18 @@ class HomeTitle extends StatelessWidget {
         horizontal: DeviceUtils.getDynamicWidth(context, 0.07),
         vertical: DeviceUtils.getDynamicHeight(context, 0.01),
       ),
-      child: CustomTitle(
-        titleTop: TranslationKeys.homeTitleLine1.trParams({
-          "product": "Skin",
-        }),
-        titleBottom: TranslationKeys.products.tr,
-      ),
+      child: Text(
+        "Skin Care",
+        style: context.textTheme.headlineLarge?.copyWith(
+          fontWeight: FontWeight.w700,
+          fontSize: 35,
+        ),),
+      // CustomTitle(
+      //   titleTop: TranslationKeys.homeTitleLine1.trParams({
+      //     "product": "Skin",
+      //   }),
+      //   titleBottom: TranslationKeys.products.tr,
+      // ),
     );
   }
 }

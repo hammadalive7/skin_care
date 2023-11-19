@@ -8,6 +8,7 @@ class Product {
   double retailPrice;
   String use;
   String category;
+  List<String> ingredients = [];
   int? stock = 1;
   int? discountRate = 0;
   List<String> images;
@@ -24,6 +25,7 @@ class Product {
     required this.use,
     required this.category,
     required this.images,
+    required this.ingredients,
     required this.isFavorite,
     required this.isAddedToCartDone,
     this.discountRate = 0,
@@ -39,6 +41,7 @@ class Product {
       'brand': brand,
       'model': name,
       'stock': stock,
+      'ingredients': ingredients,
       'description': description,
       'retailPrice': retailPrice,
       'use': use,
@@ -58,6 +61,7 @@ class Product {
       id: map['id'],
       brand: map['brand'] ?? 'Brand',
       name: map['model'],
+      ingredients: map['ingredients'] ?? [],
       stock: map['stock'],
       description: map['description'],
       retailPrice: map['retailPrice'],
