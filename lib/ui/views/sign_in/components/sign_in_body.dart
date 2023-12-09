@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 import 'package:skin_care/core/utils/device_utils.dart';
@@ -20,7 +19,7 @@ class SignInBody extends StatelessWidget {
           horizontal: DeviceUtils.getDynamicWidth(context, 0.07),
           vertical: 16.0,
         ),
-        child:  Column(
+        child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const SignInWelcome(),

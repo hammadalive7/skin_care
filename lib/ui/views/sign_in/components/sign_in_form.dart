@@ -1,6 +1,6 @@
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:skin_care/core/controllers/auth/auth_controller.dart';
 
 import 'package:skin_care/ui/views/navigation/navigation_screen.dart';
 import 'package:skin_care/ui/views/sign_in/components/sign_in_email_field.dart';
@@ -20,19 +20,24 @@ class SignInForm extends StatefulWidget {
 class _SignInFormState extends State<SignInForm> {
   final _formKey = GlobalKey<FormState>();
 
+  final controller = Get.put(AuthController());
+
+
   @override
   Widget build(BuildContext context) {
     return Form(
       key: _formKey,
       child: Column(
         children: [
-          const SignInUsernameField(),
-          const SignInEmailField(),
-          const SignInPasswordField(),
+          SignInUsernameField(controller: controller.usernameController),
+          SignInEmailField(controller: controller.emailController),
+          SignInPasswordField(controller: controller.passwordController),
           SignInSignInButton(
             onTap: () {
               if (_formKey.currentState!.validate()) {
-                Get.to(() => const NavigationScreen());
+                final email = controller.emailController.text;
+                final password = controller.passwordController.text;
+                controller.signUp(email, password);
               }
             },
           ),

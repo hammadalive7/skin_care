@@ -1,11 +1,8 @@
-
-
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-
 import 'package:skin_care/ui/views/navigation/navigation_screen.dart';
 
 class AuthController extends GetxController {
@@ -14,7 +11,14 @@ class AuthController extends GetxController {
   RxBool loginRememberMe = false.obs;
   final isGoogleLoading = false.obs;
 
-  // final user = FirebaseAuth.instance.currentUser;
+  //for signup
+  final emailController = TextEditingController();
+  final passwordController = TextEditingController();
+  final usernameController = TextEditingController();
+
+  //for login
+  final loginEmailController = TextEditingController();
+  final loginPasswordController = TextEditingController();
 
   final formKey = GlobalKey<FormState>();
 
@@ -39,23 +43,58 @@ class AuthController extends GetxController {
     confirmResetPassword.value = "";
   }
 
-  Future<void> googleSignIn() async {
-    try{
-      isGoogleLoading .value = true;
-      await signInWithGoogle();
-      isGoogleLoading .value = false;
-      Get.offAll(()=> const NavigationScreen());
-    }catch (e){
-      isGoogleLoading .value = false;
-      Get.snackbar("Error",  e.toString());
-
+  Future<void> logIn(String email, String password) async {
+    try {
+      await FirebaseAuth.instance
+          .signInWithEmailAndPassword(email: email, password: password);
+      final prefs = await SharedPreferences.getInstance();
+      prefs
+        ..setBool('isLoggedIn', true)
+        ..setString('userId', FirebaseAuth.instance.currentUser!.uid);
+      Get.offAll(() => const NavigationScreen());
+    } on FirebaseAuthException catch (e) {
+      final ex = e;
+      Get.snackbar("Error", ex.message ?? "Error");
+      throw ex.message! as Exception;
+    } catch (e) {
+      Get.snackbar("Error", e.toString());
+      throw e as Exception;
     }
   }
 
+  Future<void> signUp(String email, String password) async {
+    try {
+      await FirebaseAuth.instance
+          .createUserWithEmailAndPassword(email: email, password: password);
+      final prefs = await SharedPreferences.getInstance();
+      prefs
+        ..setBool('isLoggedIn', true)
+        ..setString('userId', FirebaseAuth.instance.currentUser!.uid);
+      Get.offAll(() => const NavigationScreen());
+    } on FirebaseAuthException catch (e) {
+      final ex = e;
+      Get.snackbar("Error", ex.message ?? "Error");
+      throw ex.message! as Exception;
+    } catch (e) {
+      Get.snackbar("Error", e.toString());
+      throw e as Exception;
+    }
+  }
+
+  Future<void> googleSignIn() async {
+    try {
+      isGoogleLoading.value = true;
+      await signInWithGoogle();
+      isGoogleLoading.value = false;
+      Get.offAll(() => const NavigationScreen());
+    } catch (e) {
+      isGoogleLoading.value = false;
+      Get.snackbar("Error", e.toString());
+    }
+  }
 
   Future<UserCredential> signInWithGoogle() async {
-
-    try{
+    try {
       // Trigger the authentication flow
       final googleUser = await GoogleSignIn().signIn();
 
@@ -68,16 +107,16 @@ class AuthController extends GetxController {
         idToken: googleAuth?.idToken,
       );
       // Once signed in, return the UserCredential
-      final userCredential = await FirebaseAuth.instance.signInWithCredential(credential);
-      print(userCredential.user!.email);
-      print(userCredential.user!.displayName);
-      print(userCredential.user!.photoURL);
-      print(userCredential.user!.uid);
+      final userCredential =
+          await FirebaseAuth.instance.signInWithCredential(credential);
+      // print(userCredential.user!.email);
+      // print(userCredential.user!.displayName);
+      // print(userCredential.user!.photoURL);
+      // print(userCredential.user!.uid);
 
       final prefs = await SharedPreferences.getInstance();
 
       if (userCredential.user != null) {
-
         // User is logged in
         prefs.setBool('isLoggedIn', true);
         prefs.setString('userId', userCredential.user!.uid);
@@ -86,9 +125,8 @@ class AuthController extends GetxController {
         prefs.setBool('isLoggedIn', false);
         prefs.remove('userId');
       }
-      
-      return userCredential;
 
+      return userCredential;
     } on FirebaseException catch (e) {
       final ex = e as FirebaseAuthException;
       Get.snackbar("Error", ex.message ?? "Error");
@@ -97,6 +135,15 @@ class AuthController extends GetxController {
       Get.snackbar("Error", e.toString());
       throw e as Exception;
     }
+  }
 
+  @override
+  void dispose() {
+    emailController.dispose();
+    passwordController.dispose();
+    usernameController.dispose();
+    loginEmailController.dispose();
+    loginPasswordController.dispose();
+    super.dispose();
   }
 }
