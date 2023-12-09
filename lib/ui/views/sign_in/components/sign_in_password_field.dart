@@ -7,8 +7,10 @@ import 'package:skin_care/core/utils/device_utils.dart';
 import 'package:skin_care/core/widgets/custom_text_field/custom_text_field_with_title.dart';
 
 class SignInPasswordField extends StatelessWidget {
+  final TextEditingController? controller;
   const SignInPasswordField({
     super.key,
+    this.controller,
   });
 
   @override
@@ -18,6 +20,7 @@ class SignInPasswordField extends StatelessWidget {
         vertical: DeviceUtils.getDynamicWidth(context, 0.02),
       ),
       child: CustomTextFieldWithTitle(
+        controller: controller,
         title: TranslationKeys.passwordTitle.tr,
         hintText: TranslationKeys.passwordHint.tr,
         obscureText: true,

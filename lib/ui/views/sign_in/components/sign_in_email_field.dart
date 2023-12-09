@@ -7,8 +7,10 @@ import 'package:skin_care/core/utils/device_utils.dart';
 import 'package:skin_care/core/widgets/custom_text_field/custom_text_field_with_title.dart';
 
 class SignInEmailField extends StatelessWidget {
+  final TextEditingController? controller;
   const SignInEmailField({
     super.key,
+    this.controller,
   });
 
   @override
@@ -18,6 +20,7 @@ class SignInEmailField extends StatelessWidget {
         vertical: DeviceUtils.getDynamicWidth(context, 0.02),
       ),
       child: CustomTextFieldWithTitle(
+        controller: controller,
         title: TranslationKeys.emailTitle.tr,
         hintText: TranslationKeys.emailHint.tr,
         textInputAction: TextInputAction.next,

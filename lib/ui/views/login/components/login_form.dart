@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
+import 'package:skin_care/core/controllers/auth/auth_controller.dart';
 import 'package:skin_care/core/utils/base/base_controller.dart';
 import 'package:skin_care/ui/views/login/components/login_email_field.dart';
 import 'package:skin_care/ui/views/login/components/login_login_button.dart';
@@ -19,22 +20,25 @@ class LoginForm extends StatefulWidget {
 }
 
 class _LoginFormState extends State<LoginForm> {
+
+  final controller = Get.put(AuthController());
+
   @override
   Widget build(BuildContext context) {
     return Form(
       key: BaseController.authController.formKey,
       child: Column(
         children: [
-          const LoginEmailField(),
-          const LoginPasswordField(),
+          LoginEmailField(controller: controller.loginEmailController),
+          LoginPasswordField(controller: controller.loginPasswordController),
           const LoginRememberMeCheckbox(),
           LoginLoginButton(
             onTap: () {
               if (BaseController.authController.formKey.currentState!
                   .validate()) {
                 HapticFeedback.lightImpact();
-                Get.offAll(
-                  () => const NavigationScreen(),
+                controller.logIn(controller.loginEmailController.text,
+                  controller.loginPasswordController.text,
                 );
               }
             },

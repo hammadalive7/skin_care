@@ -8,8 +8,10 @@ import 'package:skin_care/core/widgets/custom_text_field/custom_text_field_with_
 import 'package:skin_care/ui/views/navigation/navigation_screen.dart';
 
 class LoginPasswordField extends StatelessWidget {
+  final TextEditingController controller;
   const LoginPasswordField({
     super.key,
+    required this.controller,
   });
 
   @override
@@ -19,6 +21,7 @@ class LoginPasswordField extends StatelessWidget {
         vertical: DeviceUtils.getDynamicWidth(context, 0.02),
       ),
       child: CustomTextFieldWithTitle(
+        controller: controller,
         title: TranslationKeys.passwordTitle.tr,
         onFieldSubmitted: (v) {
           if (BaseController.authController.formKey.currentState!.validate()) {
