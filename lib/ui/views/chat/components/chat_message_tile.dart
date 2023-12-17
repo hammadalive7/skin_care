@@ -38,14 +38,14 @@ class ChatMessageTile extends StatelessWidget {
       width: DeviceUtils.getDynamicWidth(context, 0.5),
       child: Column(
         children: [
-          if (image.isNotEmpty) Image.asset("assets/images/shoe1.png"),
+          if (image.isNotEmpty) Image.asset("assets/images/doctor.jpg"),
           Text(
-            text,
+            "Hello, how can I help you?",
             style: context.textTheme.bodyMedium,
           ),
           if (url.isNotEmpty)
             Text(
-              url,
+              "https://www.skincare.com",
               style: context.textTheme.bodyMedium?.copyWith(
                 color: kBlueColor,
                 decoration: TextDecoration.underline,

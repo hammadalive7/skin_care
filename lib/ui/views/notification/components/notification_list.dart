@@ -21,19 +21,19 @@ class NotificationList extends StatelessWidget {
           const NotificationTimeTitle(title: "Today"),
           NotificationItem(
             image: productList[0].images.first,
-            title: "New shoe added to your collection",
-            description: "7 new shoe added",
+            title: "New product added to your collection",
+            description: "2 new product added",
             isNew: true,
           ),
           NotificationItem(
             image: productList[1].images.first,
-            title: "Found new shoes with blast offer",
-            description: "7 new shoe added",
+            title: "Found new product with offer",
+            description: "7 new product added",
             isNew: true,
           ),
           const NotificationItem(
-            title: "New shoe added to your collection",
-            description: "7 new shoe added",
+            title: "New product added to your collection",
+            description: "3 new product added",
           ),
           const NotificationTimeTitle(title: "Last Week"),
           NotificationItem(

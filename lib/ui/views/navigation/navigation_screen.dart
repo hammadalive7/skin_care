@@ -12,6 +12,8 @@ import 'package:skin_care/ui/views/home/home_screen.dart';
 import 'package:skin_care/ui/views/profile/profile_screen.dart';
 import 'package:skin_care/ui/views/navigation/components/navigation_bottom_bar.dart';
 
+import '../message/message_screen.dart';
+
 class NavigationScreen extends StatefulWidget {
   const NavigationScreen({Key? key}) : super(key: key);
 
@@ -24,8 +26,8 @@ class _NavigationScreenState extends BaseState<NavigationScreen> {
     const HomeScreen(),
     const DiscoverScreen(),
     const CartScreen(),
-    // const MessageScreen(),
-    const ProfileScreen(),
+    const MessageScreen(),
+    // const ProfileScreen(),
   ];
 
   @override

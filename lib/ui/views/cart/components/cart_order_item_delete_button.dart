@@ -5,6 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:skin_care/core/constants/color_constants.dart';
+import 'package:skin_care/core/models/cart_item_model.dart';
 import 'package:skin_care/core/translations/translation_keys.dart';
 import 'package:skin_care/core/utils/base/base_controller.dart';
 import 'package:skin_care/core/utils/device_utils.dart';
@@ -12,9 +13,11 @@ import 'package:skin_care/core/widgets/custom_warning_alert/custom_warning_alert
 
 class CartOrderItemDeleteButton extends StatelessWidget {
   final int index;
+  CartItem cartItem;
 
-  const CartOrderItemDeleteButton({
+   CartOrderItemDeleteButton({
     required this.index,
+    required this.cartItem,
     super.key,
   });
 
@@ -30,7 +33,7 @@ class CartOrderItemDeleteButton extends StatelessWidget {
             builder: (BuildContext context) => CustomWarningAlert(
               title: TranslationKeys.removeItemWarning.tr,
               onYesPressed: () {
-                BaseController.cartController.deleteItemFromCart(index);
+                BaseController.cartController.deleteItemFromCart(cartItem);
                 Get.back();
               },
             ),

@@ -8,14 +8,14 @@ import 'package:skin_care/core/utils/device_utils.dart';
 import 'package:skin_care/core/widgets/custom_title.dart';
 
 class CartTitle extends StatelessWidget {
-  const CartTitle({
-    super.key,
+  int cartCount;
+   CartTitle({
+    required this.cartCount, super.key,
   });
 
   @override
   Widget build(BuildContext context) {
-    return Obx(
-      () => Padding(
+    return Padding(
         padding: EdgeInsets.symmetric(
           horizontal: DeviceUtils.getDynamicWidth(context, 0.07),
           vertical: DeviceUtils.getDynamicHeight(context, 0.02),
@@ -24,10 +24,10 @@ class CartTitle extends StatelessWidget {
           titleTop: TranslationKeys.cartTitleLine1.tr,
           titleBottom: TranslationKeys.cartTitleLine2.trParams({
             "count":
-                BaseController.cartController.cartItemList.length.toString(),
+                cartCount.toString(),
           }),
         ),
-      ),
+
     );
   }
 }

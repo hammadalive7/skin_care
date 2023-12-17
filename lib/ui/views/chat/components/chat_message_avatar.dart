@@ -26,16 +26,16 @@ class ChatMessageAvatar extends StatelessWidget {
             ? kDarkFieldColor
             : kLightFieldColor,
       ),
-      child: SvgPicture.asset(
+      child: Image.asset(
         image,
-        colorFilter: !hasColor
-            ? ColorFilter.mode(
-                BaseController.themeController.isDark.value
-                    ? kDarkTextColor
-                    : kLightTextPrimaryColor,
-                BlendMode.srcIn,
-              )
-            : null,
+        // colorFilter: !hasColor
+        //     ? ColorFilter.mode(
+        //         BaseController.themeController.isDark.value
+        //             ? kDarkTextColor
+        //             : kLightTextPrimaryColor,
+        //         BlendMode.srcIn,
+        //       )
+        //     : null,
       ),
     );
   }

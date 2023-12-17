@@ -15,7 +15,7 @@ class SearchBody extends StatelessWidget {
       children: const [
         SearchTextField(),
         SearchLastSeenList(),
-        SearchLastSearchList(),
+        // SearchLastSearchList(),
       ],
     );
   }

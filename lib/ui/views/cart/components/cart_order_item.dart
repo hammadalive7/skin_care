@@ -1,6 +1,7 @@
 
-import 'package:flutter/material.dart';
+import 'dart:ffi';
 
+import 'package:flutter/material.dart';
 import 'package:skin_care/core/models/cart_item_model.dart';
 import 'package:skin_care/ui/views/cart/components/cart_order_item_delete_button.dart';
 import 'package:skin_care/ui/views/cart/components/cart_order_item_image.dart';
@@ -25,19 +26,21 @@ class CartOrderItem extends StatelessWidget {
           Expanded(
             flex: 2,
             child: CartOrderItemImage(
-              image: cartItem.product.images.first,
+              image: cartItem.image.value,
             ),
           ),
           Expanded(
             flex: 3,
             child: CartOrderItemInfo(
               index: index,
-              model: cartItem.product.name,
-              retailPrice: cartItem.product.retailPrice,
+              model: cartItem.productName.value,
+              piece: cartItem.piece.value,
+              retailPrice: cartItem.price.value,
+              cartItem: cartItem,
             ),
           ),
           Expanded(
-            child: CartOrderItemDeleteButton(index: index),
+            child: CartOrderItemDeleteButton(index: index, cartItem: cartItem),
           ),
         ],
       ),

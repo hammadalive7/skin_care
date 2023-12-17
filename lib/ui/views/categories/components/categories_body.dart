@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:skin_care/core/utils/device_utils.dart';
 import 'package:skin_care/ui/views/categories/components/categories_category_list.dart';
-import 'package:skin_care/ui/views/categories/components/categories_shoe_list.dart';
+import 'package:skin_care/ui/views/categories/components/categories_product_list.dart';
 import 'package:skin_care/ui/views/categories/components/categories_title.dart';
 
 class CategoriesBody extends StatelessWidget {
@@ -19,7 +19,7 @@ class CategoriesBody extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Expanded(child: CategoriesCategoryList()),
-          CategoriesTitle(),
+          // CategoriesTitle(),
           Expanded(flex: 4, child: CategoriesProductList()),
         ],
       ),

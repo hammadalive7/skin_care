@@ -38,7 +38,7 @@ class HomeCategoryItem extends StatelessWidget {
                       ? kLightBlueColor
                       : BaseController.themeController.isDark.value
                           ? kDarkFieldColor
-                          : kLightFieldColor,
+                          : Colors.grey[200],
             ),
             padding: const EdgeInsets.all(8.0),
             width: BaseController.homeController.categoryIndex.value == category

@@ -20,31 +20,39 @@ class _ProductItemFavButtonState extends State<ProductItemFavButton> {
     return Positioned(
       right: 0,
       top: 0,
-      child: InkResponse(
-        onTap: () {
-          HapticFeedback.selectionClick();
-          productList[widget.index].isFavorite =
-              (!productList[widget.index].isFavorite);
-        },
-        radius: 10,
-        containedInkWell: true,
-        child: Obx(() {
-          return Center(
-            child: SizedBox(
-              height: 25,
-              width: 25,
-              child: Icon(
-                productList[widget.index].isFavorite
-                    ? Icons.favorite
-                    : Icons.favorite_border,
-                size: 20,
-                color: BaseController.themeController.isDark.value
-                    ? kWhiteColor
-                    : kLightTextPrimaryColor,
+      child: Container(
+        decoration: BoxDecoration(
+          color: BaseController.themeController.isDark.value
+              ? kLightTextPrimaryColor
+              : kWhiteColor,
+          borderRadius: BorderRadius.circular(10),
+        ),
+        child: InkResponse(
+          onTap: () {
+            HapticFeedback.selectionClick();
+            productList[widget.index].isFavorite =
+                (!productList[widget.index].isFavorite);
+          },
+          radius: 10,
+          containedInkWell: true,
+          child: Obx(() {
+            return Center(
+              child: SizedBox(
+                height: 25,
+                width: 25,
+                child: Icon(
+                  productList[widget.index].isFavorite
+                      ? Icons.favorite
+                      : Icons.favorite_border,
+                  size: 20,
+                  color: BaseController.themeController.isDark.value
+                      ? kWhiteColor
+                      : kLightTextPrimaryColor,
+                ),
               ),
-            ),
-          );
-        }),
+            );
+          }),
+        ),
       ),
     );
   }

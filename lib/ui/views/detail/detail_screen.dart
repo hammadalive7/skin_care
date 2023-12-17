@@ -32,13 +32,16 @@ class _DetailScreenState extends State<DetailScreen> {
         from: 10,
         duration: const Duration(milliseconds: 800),
         child: DetailAddToCartButton(
-          productId: 1,
-          retailPrice: widget.product.discountRate != null
-              ? BaseController.homeController
-                  .calculateDiscount(
-                      widget.product.retailPrice, widget.product.discountRate!)
-                  .toStringAsFixed(2)
-              : widget.product.retailPrice.toString(),
+          productId: widget.product.id!,
+          retailPrice:
+          // widget.product.discountRate != null
+          //     ? BaseController.homeController
+          //         .calculateDiscount(
+          //             widget.product.retailPrice, widget.product.discountRate!)
+          //         .toStringAsFixed(2)
+          //     :
+          widget.product.retailPrice.toString(),
+          productModel: widget.product,
         ),
       ),
     );

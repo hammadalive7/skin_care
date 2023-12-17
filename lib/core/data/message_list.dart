@@ -14,7 +14,7 @@ RxList<Message> messageList = [
     isSentByMe: false,
   ),
   Message(
-    text: "Ok. I'll look for it!",
+    text: "I've been dealing with acne for a while, and regular products haven\'t helped. I\'d like your advice on how to treat it and improve my skin!",
     timestamp: DateTime(2023, 1, 1, 0, 1, 1),
     isSentByMe: true,
   ),

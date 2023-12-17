@@ -4,7 +4,7 @@ import 'package:skin_care/core/translations/translation_keys.dart';
 
 const Map<String, String> enTranslations = {
   // Splash
-  TranslationKeys.splashText: "Discover all trendy Products",
+  TranslationKeys.splashText: "Discover all Skincare Products",
 
   // Onboarding
   TranslationKeys.onboardingTitleLine1: "The",

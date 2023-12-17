@@ -45,11 +45,11 @@ class ProductController extends GetxController {
 
     // Iterate over the documents and convert each document to a product model object.
     List<Product> productModels = snapshots.docs.map((snapshot) {
-      debugPrint('-- snapshot data: ${snapshot.data()}');
+      // debugPrint('-- snapshot data: ${snapshot.data()}');
       return Product.fromMap(snapshot.data());
     }).toList();
 
-    debugPrint('-- productModels: $productModels');
+    // debugPrint('-- productModels: $productModels');
     return productModels;
   }
 

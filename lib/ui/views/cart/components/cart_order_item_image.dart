@@ -24,7 +24,7 @@ class CartOrderItemImage extends StatelessWidget {
             : kLightFieldColor,
         borderRadius: BorderRadius.circular(24.0),
       ),
-      child: Image.asset(image),
+      child: Image.network(image),
     );
   }
 }

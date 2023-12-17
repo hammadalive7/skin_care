@@ -25,8 +25,8 @@ class NavigationBottomBar extends StatelessWidget {
           NavigationItem(index: 0, icon: "assets/images/home.svg"),
           NavigationItem(index: 1, icon: "assets/images/discover.svg"),
           NavigationItem(index: 2, icon: "assets/images/cart.svg"),
-          // NavigationItem(index: 3, icon: "assets/images/message.svg"),
-          NavigationItem(index: 3, icon: "assets/images/profile.svg"),
+          NavigationItem(index: 3, icon: "assets/images/message.svg"),
+          // NavigationItem(index: 3, icon: "assets/images/profile.svg"),
         ],
       ),
     );

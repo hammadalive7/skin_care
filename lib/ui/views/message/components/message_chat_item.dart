@@ -44,16 +44,9 @@ class MessageChatItem extends StatelessWidget {
                       : kLightFieldColor,
                   shape: BoxShape.circle,
                 ),
-                child: SvgPicture.asset(
+                child: Image.asset(
                   sender.logo,
-                  colorFilter: !senderIconHasColor
-                      ? ColorFilter.mode(
-                          BaseController.themeController.isDark.value
-                              ? kDarkTextColor
-                              : kLightTextPrimaryColor,
-                          BlendMode.srcIn,
-                        )
-                      : null,
+                  color: senderIconHasColor ? kBlueColor : null,
                 ),
               ),
             ),

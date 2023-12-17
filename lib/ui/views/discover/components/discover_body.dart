@@ -1,4 +1,3 @@
-
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -18,17 +17,19 @@ class DiscoverBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       height: DeviceUtils.getHeight(context),
-      child: Obx(() => Column(
+      child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           // SlideInLeft(from: 10, child: const DiscoverTitle()),
-          if (BaseController.homeController.isShowCategoryList.value)
-            FadeInDown(from: 10, child: const HomeCategoryList()),
-          SizedBox(height: MediaQuery.sizeOf(context).height * .03,),
-          Expanded(child: FadeInUp(from: 10, child: const DiscoverProductList())),
+          // if (BaseController.homeController.isShowCategoryList.value)
+          //   FadeInDown(from: 10, child: const HomeCategoryList()),
+          SizedBox(
+            height: MediaQuery.sizeOf(context).height * .03,
+          ),
+          Expanded(
+              child: FadeInUp(from: 10, child: const DiscoverProductList())),
         ],
       ),
-    )
     );
   }
 }

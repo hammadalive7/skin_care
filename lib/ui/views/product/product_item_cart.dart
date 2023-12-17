@@ -6,9 +6,10 @@ import 'package:skin_care/core/constants/color_constants.dart';
 import 'package:skin_care/core/models/product_model.dart';
 import 'package:skin_care/core/utils/base/base_controller.dart';
 
+import '../../../core/widgets/custom_loading_button.dart';
+
 class ProductItemCartButton extends StatefulWidget {
   final Product productModel;
-
   const ProductItemCartButton({required this.productModel, super.key});
 
   @override
@@ -21,40 +22,50 @@ class _ProductItemCartButtonState extends State<ProductItemCartButton> {
     return Positioned(
       left: 0,
       bottom: 0,
-      child: InkResponse(
-        onTap: () async {
-          final result =
-              BaseController.cartController.addItemToCart(widget.productModel.id!);
-          if (result) {
-            HapticFeedback.lightImpact();
-            widget.productModel.isAddedToCartDone = true;
-          }
-          await Future.delayed(const Duration(milliseconds: 500), () {
-            widget.productModel.isAddedToCartDone = false;
-          });
-        },
-        radius: 10,
-        containedInkWell: true,
-        child: SizedBox(
-          height: 25,
-          width: 25,
-          child: Obx(() {
-            return Center(
-              child: SvgPicture.asset(
-                widget.productModel.isAddedToCartDone
-                    ? "assets/images/check.svg"
-                    : "assets/images/cart.svg",
-                height: 20,
-                width: 20,
-                colorFilter: ColorFilter.mode(
-                  BaseController.themeController.isDark.value
-                      ? kWhiteColor
-                      : kLightTextPrimaryColor,
-                  BlendMode.srcIn,
+      child: Container(
+        decoration: BoxDecoration(
+          color: BaseController.themeController.isDark.value
+              ? kLightTextPrimaryColor
+              : kWhiteColor,
+          borderRadius: BorderRadius.circular(10),
+        ),
+        child: InkResponse(
+          onTap: () async {
+            BaseController.cartController.storeCartProduct(widget.productModel);
+
+            // final result = BaseController.cartController
+            //     .addItemToCart(widget.productModel.id!);
+            // if (result) {
+            //   HapticFeedback.lightImpact();
+            //   widget.productModel.isAddedToCartDone = true;
+            // }
+            await Future.delayed(const Duration(milliseconds: 500), () {
+              widget.productModel.isAddedToCartDone = false;
+            },);
+          },
+          radius: 10,
+          containedInkWell: true,
+          child: SizedBox(
+            height: 25,
+            width: 25,
+            child: Obx(() {
+              return Center(
+                child: SvgPicture.asset(
+                  widget.productModel.isAddedToCartDone
+                      ? "assets/images/check.svg"
+                      : "assets/images/cart.svg",
+                  height: 20,
+                  width: 20,
+                  colorFilter: ColorFilter.mode(
+                    BaseController.themeController.isDark.value
+                        ? kWhiteColor
+                        : kLightTextPrimaryColor,
+                    BlendMode.srcIn,
+                  ),
                 ),
-              ),
-            );
-          }),
+              );
+            }),
+          ),
         ),
       ),
     );
