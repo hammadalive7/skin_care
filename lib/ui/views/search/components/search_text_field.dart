@@ -30,11 +30,11 @@ class SearchTextField extends StatelessWidget {
             ? kWhiteColor
             : kBlackColor,
         suffixIconColor: kRedColor,
-        suffixIconOnTap: () => showModalBottomSheet(
-          context: context,
-          isScrollControlled: true,
-          builder: (context) => const SearchFilterBottomSheet(),
-        ),
+        // suffixIconOnTap: () => showModalBottomSheet(
+        //   context: context,
+        //   isScrollControlled: true,
+        //   builder: (context) => const SearchFilterBottomSheet(),
+        // ),
       ),
     );
   }

@@ -11,8 +11,9 @@ import 'package:skin_care/core/widgets/custom_submit_button.dart';
 import 'package:skin_care/ui/views/checkout/checkout_screen.dart';
 
 class CartCheckoutButton extends BaseStatelessWidget {
-  const CartCheckoutButton({
-    super.key,
+  int cartItems;
+   CartCheckoutButton({
+    required this.cartItems, super.key,
   });
 
   @override
@@ -22,17 +23,16 @@ class CartCheckoutButton extends BaseStatelessWidget {
         horizontal: DeviceUtils.getDynamicWidth(context, 0.07),
         vertical: 16.0,
       ),
-      child: Obx(() {
-        return CustomSubmitButton(
+      child: CustomSubmitButton(
           title: TranslationKeys.checkout.tr,
-          onTap: BaseController.cartController.cartItemList.isEmpty
+          onTap: cartItems == 0
               ? null
               : () {
                   HapticFeedback.lightImpact();
                   Get.to(() => const CheckoutScreen());
                 },
-        );
-      }),
+        ),
+
     );
   }
 }

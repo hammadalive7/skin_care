@@ -9,14 +9,23 @@ List<Category> categoryList = [
   ),
   Category(
     id: 2,
-    title: "Men's",
+    title: "Serums",
   ),
   Category(
     id: 3,
-    title: "Women's",
+    title: "Scrubs",
   ),
   Category(
     id: 4,
-    title: "Unisex",
+    title: "Moisturiser",
   ),
+  Category(
+    id: 5,
+    title: "Cleanser",
+  ),
+  Category(
+    id: 6,
+    title: "Mask",
+  ),
+
 ];

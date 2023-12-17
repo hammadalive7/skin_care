@@ -20,7 +20,7 @@ class DiscoverTitle extends StatelessWidget {
       ),
       child: CustomTitle(
         titleTop: TranslationKeys.discoverTitleLine1.trParams({
-          "count": "1001",
+          "count": "100",
         }),
         titleBottom: TranslationKeys.discoverTitleLine2.tr,
       ),

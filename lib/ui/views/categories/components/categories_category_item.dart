@@ -33,6 +33,8 @@ class CategoriesCategoryItem extends StatelessWidget {
             onTap: () {
               HapticFeedback.lightImpact();
               BaseController.categoriesController.changeCategory(index);
+              BaseController.categoriesController.category.value = categoryList[index].title;
+              BaseController.categoriesController.fetchProductCategoryData(categoryList[index].title);
             },
             child: Container(
               padding: const EdgeInsets.symmetric(

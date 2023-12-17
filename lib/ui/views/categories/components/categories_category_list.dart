@@ -33,6 +33,7 @@ class CategoriesCategoryList extends StatelessWidget {
           }
         },
       ),
+
       // child: ListView(
       //   scrollDirection: Axis.horizontal,
       //   children: [

@@ -1,4 +1,3 @@
-
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:skin_care/core/utils/base/base_statefull.dart';
@@ -11,11 +10,9 @@ class HomeBody extends StatefulWidget {
   const HomeBody({
     super.key,
   });
-
   @override
   State<HomeBody> createState() => _HomeBodyState();
 }
-
 class _HomeBodyState extends BaseState<HomeBody> {
   @override
   Widget build(BuildContext context) {

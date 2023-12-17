@@ -27,33 +27,16 @@ class MessageChatList extends StatelessWidget {
                 MessageChatItem(
                   sender: orderSupplierList[0],
                   senderIconHasColor: false,
-                  lastMessage: "Your order has been placed!",
+                  lastMessage: "Nope!",
                   newMessageCount: 2,
                 ),
                 MessageChatItem(
                   sender: orderSupplierList[1],
                   senderIconHasColor: false,
-                  lastMessage: "Thanks for ordering from us.",
+                  lastMessage: "Thanks you.",
                   newMessageCount: 0,
                 ),
-                MessageChatItem(
-                  sender: orderSupplierList[2],
-                  senderIconHasColor: false,
-                  lastMessage: "Your order has been shipped!",
-                  newMessageCount: 0,
-                ),
-                MessageChatItem(
-                  sender: orderSupplierList[3],
-                  senderIconHasColor: true,
-                  lastMessage: "Your order has been preparing.",
-                  newMessageCount: 2,
-                ),
-                MessageChatItem(
-                  sender: orderSupplierList[4],
-                  senderIconHasColor: true,
-                  lastMessage: "Thanks for shopping!",
-                  newMessageCount: 1,
-                ),
+
               ],
             ),
           ),

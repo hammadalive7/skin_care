@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:skin_care/core/constants/color_constants.dart';
@@ -20,8 +19,8 @@ class ProductItemView extends StatelessWidget {
 
   ProductItemView({
     required this.index,
-    this.showColor = false,
     required this.product,
+    this.showColor = false,
     super.key,
   });
 
@@ -36,7 +35,7 @@ class ProductItemView extends StatelessWidget {
             () {
               return Container(
                 width: DeviceUtils.getDynamicWidth(context, 0.4),
-                height: DeviceUtils.getDynamicHeight(context, 0.2),
+                height: DeviceUtils.getDynamicHeight(context, 0.27),
                 padding: const EdgeInsets.all(12.0),
                 decoration: BoxDecoration(
                   boxShadow: [
@@ -58,39 +57,47 @@ class ProductItemView extends StatelessWidget {
                       : kLightFieldColor,
                   borderRadius: BorderRadius.circular(24.0),
                 ),
-                child: Stack(
+                child: Column(
                   children: [
-                    ProductItemImage(index: index, productImage: product.images),
-                    ProductItemFavButton(index: index),
-                    ProductItemCartButton(
-                      productModel: productList[index],
+                    Stack(
+                      children: [
+                        ProductItemImage(
+                            index: index, productImage: product.images),
+                        ProductItemFavButton(index: index),
+                        ProductItemCartButton(
+                          productModel: product,
+                        ),
+                        if (productList[index].stock! < 5)
+                          ProductStockLeft(index: index),
+                      ],
                     ),
-                    if (productList[index].stock! < 5) ProductStockLeft(index: index),
+                    const SizedBox(height: 15),
+                    ProductPrice(
+                        productIndex: index,
+                        productPrice: product.retailPrice,
+                        productName: product.name),
                   ],
                 ),
               );
             },
           ),
-          ProductPrice(productIndex: index, productPrice: product.retailPrice, productName: product.name),
           // if (showColor)
-            // Row(
-            //   children: productList[index]
-            //       .colors
-            //       .map(
-            //         (color) => Container(
-            //           width: 16,
-            //           height: 16,
-            //           margin: const EdgeInsets.symmetric(horizontal: 4.0),
-            //           decoration: BoxDecoration(
-            //             color: color,
-            //             shape: BoxShape.circle,
-            //           ),
-            //         ),
-            //       )
-            //       .toList(),
-            // ),
-
-
+          // Row(
+          //   children: productList[index]
+          //       .colors
+          //       .map(
+          //         (color) => Container(
+          //           width: 16,
+          //           height: 16,
+          //           margin: const EdgeInsets.symmetric(horizontal: 4.0),
+          //           decoration: BoxDecoration(
+          //             color: color,
+          //             shape: BoxShape.circle,
+          //           ),
+          //         ),
+          //       )
+          //       .toList(),
+          // ),
         ],
       ),
     );

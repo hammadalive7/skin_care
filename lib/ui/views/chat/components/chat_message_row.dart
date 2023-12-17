@@ -27,11 +27,11 @@ class ChatMessageRow extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
               const ChatMessageAvatar(
-                image: "assets/images/nike_logo.svg",
+                image: "assets/images/nurse.jpg",
                 hasColor: false,
               ),
               ChatMessageTile(
-                image: "assets/images/shoe1.png",
+                image: "assets/images/doctor.jpg",
                 text: message.text,
                 url: message.url,
               ),

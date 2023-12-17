@@ -18,7 +18,7 @@ class HomeTitle extends StatelessWidget {
         vertical: DeviceUtils.getDynamicHeight(context, 0.01),
       ),
       child: Text(
-        "Skin Care",
+        "SkinCloud",
         style: context.textTheme.headlineLarge?.copyWith(
           fontWeight: FontWeight.w700,
           fontSize: 35,
