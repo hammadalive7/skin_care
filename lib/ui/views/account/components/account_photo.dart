@@ -16,13 +16,13 @@ class AccountInfo extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 8.0),
       child: Column(
         children: [
-          Image.asset("assets/images/profile_picture.png",
+          Image.asset("assets/images/icon.png",
               width: 100.0, height: 100.0),
           const SizedBox(height: 16.0),
           Column(
             children: [
               Text(
-                "XamDesign",
+                "SkinCloud",
                 style: context.textTheme.titleMedium?.copyWith(
                   fontWeight: FontWeight.w700,
                 ),

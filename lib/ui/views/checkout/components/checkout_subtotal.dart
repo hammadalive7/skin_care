@@ -31,7 +31,7 @@ class CheckoutSubtotal extends StatelessWidget {
           Obx(
                 () =>
                 Text(
-                  "\$ ${BaseController.cartController.cartTotal.toStringAsFixed(
+                  "\$ ${BaseController.cartController.getCartTotal.toStringAsFixed(
                       2)}",
                   style: context.textTheme.titleMedium?.copyWith(
                     fontWeight: FontWeight.normal,

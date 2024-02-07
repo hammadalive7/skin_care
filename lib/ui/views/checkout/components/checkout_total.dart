@@ -6,6 +6,8 @@ import 'package:skin_care/core/translations/translation_keys.dart';
 import 'package:skin_care/core/utils/base/base_controller.dart';
 import 'package:skin_care/core/utils/device_utils.dart';
 
+import '../../../../core/models/cart_item_model.dart';
+
 class CheckoutTotal extends StatelessWidget {
   const CheckoutTotal({
     super.key,
@@ -31,7 +33,7 @@ class CheckoutTotal extends StatelessWidget {
           Obx(
                 () =>
                 Text(
-                  "\$ ${BaseController.cartController.cartTotalWithShippingCost
+                  "\$ ${BaseController.cartController.calculateTotalWithShippingCost()
                       .toStringAsFixed(2)}",
                   style: context.textTheme.titleMedium,
                 ),

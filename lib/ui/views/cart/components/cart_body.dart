@@ -50,7 +50,7 @@ class _CartBodyState extends State<CartBody> {
                     Expanded(
                         child: SlideInRight(
                             from: 10,
-                            child: CartCheckoutButton(cartItems: data.length))),
+                            child: CartCheckoutButton(cartItems: data))),
                   ],
                 ),
                 Expanded(
