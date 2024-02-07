@@ -71,7 +71,7 @@ class ProductItemView extends StatelessWidget {
                           ProductStockLeft(index: index),
                       ],
                     ),
-                    const SizedBox(height: 15),
+                    SizedBox(height: MediaQuery.of(context).size.height * 0.01),
                     ProductPrice(
                         productIndex: index,
                         productPrice: product.retailPrice,

@@ -26,7 +26,7 @@ class CustomDrawerProfileInfo extends BaseStatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  "NOTHING",
+                  "Skin Care",
                   style: Theme.of(context).textTheme.labelMedium?.copyWith(
                         fontWeight: FontWeight.bold,
                       ),

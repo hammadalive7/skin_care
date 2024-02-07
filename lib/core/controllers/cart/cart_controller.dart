@@ -7,11 +7,27 @@ import '../../models/product_model.dart';
 
 class CartController extends GetxController {
   RxList<CartItem> cartItemList = <CartItem>[].obs;
-  RxDouble cartTotal = 0.0.obs;
-  RxDouble shippingCost = 80.0.obs;
+  static RxDouble cartTotal = 0.0.obs;
+  RxDouble shippingCost = 20.0.obs;
   RxDouble cartTotalWithShippingCost = 0.0.obs;
   final RoundedLoadingButtonController addToCartButtonController =
       RoundedLoadingButtonController();
+
+  //getter for cartTotal
+  double get getCartTotal => cartTotal.value;
+
+  double calculateTotal(List<CartItem> product) {
+    cartTotal.value = 0.0;
+    for (var i = 0; i < product.length; i++) {
+      cartTotal.value += product[i].price.toDouble();
+    }
+    return cartTotal.value;
+  }
+
+  double calculateTotalWithShippingCost() {
+    cartTotalWithShippingCost.value = cartTotal.value + shippingCost.value;
+    return cartTotalWithShippingCost.value;
+  }
 
   Future<void> storeCartProduct(Product product) async {
     try {
@@ -127,6 +143,17 @@ class CartController extends GetxController {
     FirebaseFirestore.instance
         .collection('ProductCart')
         .where('id', isEqualTo: cartItem.id)
+        .get()
+        .then((value) {
+      value.docs.forEach((element) {
+        element.reference.delete();
+      });
+    });
+  }
+  void deleteAllItemFromCart() {
+    // remove it from firestore
+    FirebaseFirestore.instance
+        .collection('ProductCart')
         .get()
         .then((value) {
       value.docs.forEach((element) {
