@@ -21,7 +21,7 @@ class CustomDrawer extends BaseStatelessWidget {
         child: Column(
           children: [
             const CustomDrawerTopSection(),
-            const CustomDrawerProfileInfo(),
+            CustomDrawerProfileInfo(),
             const Expanded(flex: 7, child: CustomDrawerPageList()),
             const Expanded(flex: 3, child: CustomDrawerSignOutButton()),
             Expanded(flex: 1, child: SizedBox(

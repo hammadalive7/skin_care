@@ -25,6 +25,8 @@ class SignInUsernameField extends StatelessWidget {
         title: TranslationKeys.usernameTitle.tr,
         hintText: TranslationKeys.usernameHint.tr,
         textInputAction: TextInputAction.next,
+        //email validation
+
       ),
     );
   }

@@ -20,7 +20,11 @@ class OnboardingBody extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Expanded(flex: 2, child: OnboardingImage()),
+          // const Expanded(flex: 2, child: OnboardingImage()),
+          SizedBox(
+            height: DeviceUtils.getDynamicHeight(context, 0.2),
+            // child: OnboardingImage(),
+          ),
           Expanded(
             flex: 5,
             child: Padding(

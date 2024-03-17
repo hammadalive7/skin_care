@@ -24,6 +24,15 @@ class LoginEmailField extends StatelessWidget {
         title: TranslationKeys.emailTitle.tr,
         hintText: TranslationKeys.emailHint.tr,
         textInputAction: TextInputAction.next,
+        validator: (val) {
+          if (val!.isEmpty) {
+            return TranslationKeys.fieldCantBeEmpty.tr;
+          }
+          if (!GetUtils.isEmail(val)) {
+            return "Invalid email";
+          }
+          return null;
+        },
       ),
     );
   }

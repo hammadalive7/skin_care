@@ -36,8 +36,9 @@ class _SignInFormState extends State<SignInForm> {
             onTap: () {
               if (_formKey.currentState!.validate()) {
                 final email = controller.emailController.text;
+                final username = controller.usernameController.text;
                 final password = controller.passwordController.text;
-                controller.signUp(email, password);
+                controller.signUp(email, password, username);
               }
             },
           ),

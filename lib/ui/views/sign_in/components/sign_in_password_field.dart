@@ -24,6 +24,15 @@ class SignInPasswordField extends StatelessWidget {
         title: TranslationKeys.passwordTitle.tr,
         hintText: TranslationKeys.passwordHint.tr,
         obscureText: true,
+        validator: (val) {
+          if (val!.isEmpty) {
+            return TranslationKeys.fieldCantBeEmpty.tr;
+          }
+          if (val.length < 6) {
+            return "Password must be at least 6 characters";
+          }
+          return null;
+        },
       ),
     );
   }

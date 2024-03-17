@@ -1,4 +1,5 @@
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -8,8 +9,10 @@ import 'package:skin_care/core/utils/device_utils.dart';
 import 'package:skin_care/core/widgets/custom_text_field/custom_text_field_with_title.dart';
 
 class ForgotPasswordEmailField extends BaseStatelessWidget {
-  const ForgotPasswordEmailField({
+  TextEditingController mailController;
+  ForgotPasswordEmailField({
     super.key,
+    required this.mailController,
   });
 
   @override
@@ -21,6 +24,7 @@ class ForgotPasswordEmailField extends BaseStatelessWidget {
       child: CustomTextFieldWithTitle(
         title: TranslationKeys.emailTitle.tr,
         hintText: TranslationKeys.emailHint.tr,
+        controller: mailController,
       ),
     );
   }

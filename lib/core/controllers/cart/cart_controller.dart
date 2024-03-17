@@ -8,6 +8,7 @@ import '../../models/product_model.dart';
 class CartController extends GetxController {
   RxList<CartItem> cartItemList = <CartItem>[].obs;
   static RxDouble cartTotal = 0.0.obs;
+
   RxDouble shippingCost = 20.0.obs;
   RxDouble cartTotalWithShippingCost = 0.0.obs;
   final RoundedLoadingButtonController addToCartButtonController =

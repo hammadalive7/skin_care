@@ -30,11 +30,11 @@ class _HomeBodyState extends BaseState<HomeBody> {
                     child: FadeInUp(from: 10, child: const HomeProductList())),
               ],
             ),
-          Positioned(
-            right: 0,
-            top: 10,
-            child: SlideInRight(from: 10, child: const HomeFilterButton()),
-          ),
+          // Positioned(
+          //   right: 0,
+          //   top: 10,
+          //   child: SlideInRight(from: 10, child: const HomeFilterButton()),
+          // ),
         ],
       ),
     );

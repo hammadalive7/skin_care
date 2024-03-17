@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -19,6 +20,9 @@ class AuthController extends GetxController {
   //for login
   final loginEmailController = TextEditingController();
   final loginPasswordController = TextEditingController();
+
+  //for forgot password
+  final forgotPasswordEmailController = TextEditingController();
 
   final formKey = GlobalKey<FormState>();
 
@@ -54,18 +58,30 @@ class AuthController extends GetxController {
       Get.offAll(() => const NavigationScreen());
     } on FirebaseAuthException catch (e) {
       final ex = e;
-      Get.snackbar("Error", ex.message ?? "Error");
-      throw ex.message! as Exception;
+      // Get.snackbar("Error", ex.message ?? "Error");
+      throw ex.message!;
     } catch (e) {
       Get.snackbar("Error", e.toString());
       throw e as Exception;
     }
   }
 
-  Future<void> signUp(String email, String password) async {
+  Future<void> signUp(String email, String password, String username) async {
     try {
       await FirebaseAuth.instance
           .createUserWithEmailAndPassword(email: email, password: password);
+
+      // store user data in Firestore
+      await FirebaseFirestore.instance
+          .collection('users')
+          .doc(FirebaseAuth.instance.currentUser!.uid)
+          .set({
+        'email': email,
+        'username': username,
+        'uid': FirebaseAuth.instance.currentUser!.uid,
+        'address': '',
+      }, SetOptions(merge: true));
+
       final prefs = await SharedPreferences.getInstance();
       prefs
         ..setBool('isLoggedIn', true)
@@ -114,6 +130,17 @@ class AuthController extends GetxController {
       // print(userCredential.user!.photoURL);
       // print(userCredential.user!.uid);
 
+      // store user data in Firestore
+      await FirebaseFirestore.instance
+          .collection('users')
+          .doc(FirebaseAuth.instance.currentUser!.uid)
+          .set({
+        'email': userCredential.user!.email,
+        'username': userCredential.user!.displayName,
+        'uid': userCredential.user!.uid,
+        'address': '',
+      }, SetOptions(merge: true));
+
       final prefs = await SharedPreferences.getInstance();
 
       if (userCredential.user != null) {
@@ -129,12 +156,25 @@ class AuthController extends GetxController {
       return userCredential;
     } on FirebaseException catch (e) {
       final ex = e as FirebaseAuthException;
-      Get.snackbar("Error", ex.message ?? "Error");
+      // Get.snackbar("Error", ex.message ?? "Error");
       throw ex.message! as Exception;
     } catch (e) {
       Get.snackbar("Error", e.toString());
       throw e as Exception;
     }
+  }
+
+  Future<bool> forgotPassword({required String email}) async {
+    try {
+      await FirebaseAuth.instance.sendPasswordResetEmail(email: email);
+      return true;
+    } on FirebaseAuthException catch (err) {
+      throw Exception(err.message.toString());
+
+    } catch (err) {
+      throw Exception(err.toString());
+    }
+
   }
 
   @override
